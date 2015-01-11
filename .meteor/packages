@@ -8,3 +8,9 @@ meteor-platform
 autopublish
 insecure
 bootstrap
+accounts-password
+accounts-ui
+accounts-base
+iron:router
+sacha:spin
+mrt:bootstrap-alerts

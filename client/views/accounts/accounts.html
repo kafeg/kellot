@@ -1,0 +1,103 @@
+<template name='createAccountForm'>
+  <div class='center span3'>
+    <header>
+      <h5>Зарегистрировать учётную запись</h5>
+      <!-- <button class='close'>×</button> -->
+    </header>
+    <div class='panel-body'>
+      <div class='form-wrapper'>
+        <div class='intro-form-wrapper'>
+          <form id='register-form' class='intro-form'>
+            <input type='email' id='account-email' class='large wide' placeholder='"Электронный почтовый адрес"'/>
+            <input type='password' id='account-password' class='large wide' placeholder='Пароль' />
+            <input type='submit' id='create-account' class='btn btn-pink large wide' value='Зарегистрироваться' />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name='passwordRecoveryForm'>
+  <div class='center span3'>
+    <header>
+
+      {{#if resetToken}}
+      <h5>Ввести новый пароль</h5>
+      {{else}}
+      <h5>Сбросить пароль</h5>
+      {{/if}}
+
+      <!-- <button class='close'>×</button> -->
+    </header>
+    <div class='panel-body'>
+      <div class='form-wrapper'>
+        <div class='intro-form-wrapper'>
+          <div class='intro-form'>
+
+            {{#if resetToken}}
+            <form id='new-password'>
+              <input type='text' id='new-password-password' class='large wide' placeholder='Новый пароль' />
+              <input type='submit' class='btn btn-pink large wide' value='CИзменить пароль'/>
+            </form>
+            {{else}}
+            <form id='recovery-form'>
+              <input type='text' id='recovery-email' class='large wide' placeholder='Электронный почтовый адрес'/>
+              <input type='submit' class='btn btn-pink large wide' value='Выслать инструкции по восстановлению' />
+            </form>
+            {{/if}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name='alredyLoggedInForm'>
+    <header>
+      <h5>Вы успешно авторизованы как {{meteorUserName}}</h5>
+    </header>
+</template>
+
+<template name='loginForm'>
+
+  {{#if alredyLoggedIn}}
+  {{> alredyLoggedInForm}}
+  {{/if}}
+
+  {{#if loginForm}}
+
+  <div class='center span3'>
+    <header>
+      <h5>Войти в систему</h5>
+    </header>
+    <div class='panel-body'>
+      <div class='form-wrapper'>
+        <div class='intro-form-wrapper'>
+          <div id='intro-login-form' class='intro-form login'>
+            <form id='login-form'>
+              <input type='email' id='login-email' class='wide large' style='margin-top: 0;' placeholder='Электронный почтовый адрес'/>
+              <input type='password' id='login-password' class='large' placeholder='Пароль'/>
+              <input type='submit' class='btn btn-green large'  id='login-button' value='Войти'/>
+            </form>
+            <a href='#forgotPassword' data-toggle='modal' id='forgot-password'>Напомнить пароль?</a>
+            <span class='divider'> / </span>
+            <a href='#' id='create-account'>Зарегистрироваться</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{/if}}
+
+  {{#if passwordRecovery}}
+  {{> passwordRecoveryForm}}
+  {{/if}}
+
+  {{#if createAccount}}
+  {{> createAccountForm}}
+  {{/if}}
+
+</template>
