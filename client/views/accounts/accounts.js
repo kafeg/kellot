@@ -29,7 +29,7 @@ function isValidPassword(val, field) {
 
 function isNotEmpty(val, field) {
   // if null or empty, return false
-  if (!val || val === ''){
+  if (!val || val === '') {
     Alerts.add('Пожалуйста заполните все обязательные поля', 'error');
     //Session.set('displayMessage', 'Error & Please fill in all required fields.');
     return false;
@@ -37,12 +37,15 @@ function isNotEmpty(val, field) {
   return true;
 }
 
-Template.alredyLoggedInForm.meteorUserName = function() {
-  //return '123';
-  var user = Meteor.user();
-  if (user && user.emails)
-    return user.emails[0].address;
-  };
+Template.alredyLoggedInForm.helpers({
+  meteorUserName: function() {
+    //return '123';
+    var user = Meteor.user();
+    if (user && user.emails)
+      return user.emails[0].address;
+  }
+
+});
 
 // Login Form Helpers
 Template.loginForm.helpers({
@@ -55,7 +58,7 @@ Template.loginForm.helpers({
         Session.set('alredyLoggedIn', true);
         return true;
       } else {
-        console.log('alredyLoggedIn', false);
+        //console.log('alredyLoggedIn', false);
         Session.set('alredyLoggedIn', false);
         return false;
       }
@@ -80,37 +83,14 @@ Template.loginForm.helpers({
 
   function onLogin(err) {
     if (err) {
+      Alerts.removeSeen();
       Alerts.add('Ошибка входа: ' + err.reason, 'error');
       return;
     }
     Session.set('formView', 'alredyLoggedIn');
     Router.go('index');
+    Alerts.removeSeen();
     Alerts.add('Вход успешно выполнен!', 'success');
-  }
-
-  function createProject() {
-    var videoObject = Session.get('createProjectFlow');
-
-    var newProject = {
-      user: Meteor.userId(),
-      created: new Date(),
-      type: videoObject.type,
-      url : videoObject.url
-    };
-
-    if (videoObject.type === 'html') {
-      newProject.name = videoObject.name;
-    }
-
-    // actually insert new object into database
-    var newVideo = Videos.insert(newProject);
-    Router.navigate('project/' + newVideo);
-
-    delete Subtitler.videoNode;
-    Session.set('currentVideo', newVideo);
-    Session.set('loadingError', null);
-    Session.set('currentView', 'app');
-    Session.set('createProjectFlow', null);
   }
 
   // Login Form Events
@@ -164,15 +144,17 @@ Template.loginForm.helpers({
         Session.set('loading', true);
         Accounts.createUser({email: email, password : password}, function(err){
           if (err && err.error === 403) {
-            console.log('Account Creation Error &' + err.reason);
+            //console.log('Account Creation Error &' + err.reason);
+            Alerts.removeSeen();
             Alerts.add('Ошибка создания аккаунта: ' + err.reason, 'error');
 
             //Session.set('displayMessage', 'Account Creation Error &' + err.reason);
             Session.set('loading', false);
           } else {
             Router.go('loginForm');
+            Alerts.removeSeen();
             Alerts.add("Аккаунт успешно создан!", 'success');
-            //Session.set('formView', 'loginForm');
+            Session.set('formView', 'alredyLoggedIn');
             //console.log('createProjectFlow');
             //if (Session.get('createProjectFlow')) createProject();
             //Session.set('overlay', null);
@@ -200,10 +182,11 @@ Template.loginForm.helpers({
       if (isNotEmpty(email, 'recoveryError') && isEmail(email, 'recoveryError')) {
         Session.set('loading', true);
         Accounts.forgotPassword({email: email}, function(err){
-          if (err)
+          if (err) {
             Alerts.add('Ошибка сброса пароля: ' + err.reason, 'error');
             //Session.set('displayMessage', 'Password Reset Error & ' + err.reason);
-            else {
+          } else {
+              Alerts.removeSeen();
               Alerts.add('Инструкции по восставнолению высланы на Ваш EMail ', 'error');
               //Session.set('displayMessage', 'Email Sent & Please check your email to reset your password.');
               Session.set('passwordView', null);

@@ -14,3 +14,4 @@ accounts-base
 iron:router
 sacha:spin
 mrt:bootstrap-alerts
+natestrauser:connection-banner

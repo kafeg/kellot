@@ -8,3 +8,12 @@ if (Meteor.isClient) {
     }
   });
 }
+
+Template.navItems.events({
+  'click #logoutLink' : function(e, t) {
+    Meteor.logout();
+    Alerts.removeSeen();
+    Alerts.add('Вы вышли из системы!', 'success');
+    Router.go('loginForm');
+  }
+});

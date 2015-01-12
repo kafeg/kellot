@@ -1,6 +1,8 @@
 <template name="layout">
+  {{>connectionBanner}}
   {{> navigation}}
   <div class="container">
+
     {{> bootstrapAlerts}}
     {{> yield}}
   </div>

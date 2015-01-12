@@ -1,0 +1,10 @@
+{
+  "public":{
+    "connectionBanner":{
+      "connectionLostText":"Соединение с сервером разорвано.",
+      "tryReconnectText":"Попробовать подключиться",
+      "reconnectBeforeCountdownText":"Следующая попытка подключения через",
+      "reconnectAfterCountdownText":"."
+    }
+  }
+}

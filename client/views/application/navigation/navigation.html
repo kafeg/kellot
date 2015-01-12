@@ -23,7 +23,12 @@
 </template>
 
 <template name='navItems'>
-  <li class="{{ activeIfTemplateIs 'TimeCard' }}"><a href="{{pathFor 'timeCard'}}">Табель</a></li>
-  <li class="{{ activeIfTemplateIs 'Staff' }}"><a href="{{pathFor 'staff'}}">Сотрудники</a></li>
-  <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li>
+  {{#if currentUser}}
+    <li class="{{ activeIfTemplateIs 'TimeCard' }}"><a href="{{pathFor 'timeCard'}}">Табель</a></li>
+    <li class="{{ activeIfTemplateIs 'Staff' }}"><a href="{{pathFor 'staff'}}">Сотрудники</a></li>
+    <li class="{{ activeIfTemplateIs 'UserProfile' }}"><a href="{{pathFor 'userProfile'}}">Личный кабинет</a></li>
+    <li class="{{ activeIfTemplateIs 'Logout' }}"><a id="logoutLink" href="#">Выйти</a></li>
+  {{else}}
+    <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li>
+  {{/if}}
 </template>
