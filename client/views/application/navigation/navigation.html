@@ -1,34 +1,33 @@
-<template name="navigation">
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        {{> navBrand}}
-        <div class="nav-collapse collapse">
-          <ul class="nav pull-right">
-            {{> navItems}}
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+<template name='navigation'>
+  <div class="navbar navbar-info">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{> navBrand}}
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {{> navItems}}
+        {{> loginButtons}}
+      </ul>
     </div>
   </div>
 </template>
 
 <template name="navBrand">
-  <a class="brand" href="/">Timecard</a>
+  <a class="navbar-brand" href="/">Timecard</a>
 </template>
 
 <template name='navItems'>
   {{#if currentUser}}
-    <li class="{{ activeIfTemplateIs 'TimeCard' }}"><a href="{{pathFor 'timeCard'}}">Табель</a></li>
-    <li class="{{ activeIfTemplateIs 'Staff' }}"><a href="{{pathFor 'staff'}}">Сотрудники</a></li>
-    <li class="{{ activeIfTemplateIs 'UserProfile' }}"><a href="{{pathFor 'userProfile'}}">Личный кабинет</a></li>
-    <li class="{{ activeIfTemplateIs 'Logout' }}"><a id="logoutLink" href="#">Выйти</a></li>
+  <li class="{{ activeIfTemplateIs 'TimeCard' }}"><a href="{{pathFor 'timeCard'}}">Табель</a></li>
+  <li class="{{ activeIfTemplateIs 'Staff' }}"><a href="{{pathFor 'staff'}}">Сотрудники</a></li>
+  <li class="{{ activeIfTemplateIs 'Company' }}"><a href="{{pathFor 'company'}}">Моя компания</a></li>
+  <!-- <li class="{{ activeIfTemplateIs 'UserProfile' }}"><a href="{{pathFor 'userProfile'}}">Личный кабинет</a></li> -->
   {{else}}
-    <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li>
+  <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li>
   {{/if}}
 </template>

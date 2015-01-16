@@ -2,8 +2,12 @@
   {{>connectionBanner}}
   {{> navigation}}
   <div class="container">
-
     {{> bootstrapAlerts}}
     {{> yield}}
   </div>
+  <script>
+  $(document).ready(function() {
+    $.material.init();
+  });
+  </script>
 </template>
