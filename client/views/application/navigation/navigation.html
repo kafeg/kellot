@@ -1,5 +1,5 @@
 <template name='navigation'>
-  <div class="navbar navbar-info">
+  <div class="navbar navbar-default">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
         <span class="icon-bar"></span>
@@ -18,16 +18,23 @@
 </template>
 
 <template name="navBrand">
-  <a class="navbar-brand" href="/">Timecard</a>
+  <a class="navbar-brand" href="/">Kellot</a>
 </template>
 
 <template name='navItems'>
   {{#if currentUser}}
   <li class="{{ activeIfTemplateIs 'TimeCard' }}"><a href="{{pathFor 'timeCard'}}">Табель</a></li>
   <li class="{{ activeIfTemplateIs 'Staff' }}"><a href="{{pathFor 'staff'}}">Сотрудники</a></li>
-  <li class="{{ activeIfTemplateIs 'Company' }}"><a href="{{pathFor 'company'}}">Моя компания</a></li>
+  <li class="dropdown {{ activeIfTemplateIs 'Department|Holiday' }}">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Справочники <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li class="{{ activeIfTemplateIs 'Department' }}"><a href="{{pathFor 'department'}}">Подразделения</a></li>
+      <li class="{{ activeIfTemplateIs 'Holiday' }}"><a href="{{pathFor 'holiday'}}">Праздники</a></li>
+    </ul>
+  </li>
+  <li class="{{ activeIfTemplateIs 'Company|RegisterNewCompanyForm|UpdateCompanyForm' }}"><a href="{{pathFor 'company'}}">Моя компания</a></li>
   <!-- <li class="{{ activeIfTemplateIs 'UserProfile' }}"><a href="{{pathFor 'userProfile'}}">Личный кабинет</a></li> -->
   {{else}}
-  <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li>
+  <!-- <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li> -->
   {{/if}}
 </template>

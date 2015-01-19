@@ -3,11 +3,20 @@
   {{> navigation}}
   <div class="container">
     {{> bootstrapAlerts}}
-    {{> yield}}
+    <div class="well page">
+      {{> yield}}
+    </div>
   </div>
   <script>
   $(document).ready(function() {
     $.material.init();
   });
   </script>
+  <!-- <div class="navbar-fixed-bottom row-fluid navbar-default">
+    <div class="navbar-inner">
+      <div class="container">
+        ololo
+      </div>
+    </div>
+  </div> -->
 </template>

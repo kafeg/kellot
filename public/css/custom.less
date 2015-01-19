@@ -1,0 +1,9 @@
+@import "../../.meteor/local/bower/bootstrap-material-design/less/material-wfont.less";
+//@import "../.meteor/local/bower/bootstrap-material-design/less/_colors.less";
+
+// Override @primary color with one took from _colors.less
+@primary: #00ACC1;
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+  background-color: @primary;
+}

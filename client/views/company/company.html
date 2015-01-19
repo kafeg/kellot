@@ -1,35 +1,36 @@
 <template name="company">
-
-  {{#if userDontHasCompany}}
-    {{> registerNewCompanyForm}}
-  {{else}}
     {{> viewCompanyForm}}
-  {{/if}}
-
 </template>
 
 <template name="viewCompanyForm">
   {{#with userCompany}}
-  <div class="jumbotron">
     <h2><div class="icon-preview"><i class="mdi-social-people-outline"></i></div>{{title}}</h2>
     <p>{{description}}</p>
-  </div>
+
+    {{> updateFormButton formName="updateCompanyForm"}}
   {{/with}}
 </template>
 
-<template name="registerNewCompanyForm1">
-  {{> quickForm collection="Company" id="registerNewCompanyForm" type="insert"}}
+<template name="companyFieldset">
+  <fieldset>
+    {{> afQuickField name='title'}}
+    {{> afQuickField name='description' rows=3}}
+  </fieldset>
 </template>
 
 <template name="registerNewCompanyForm">
   {{#autoForm collection="Company" id="registerNewCompanyForm" type="insert"}}
-  <div class="jumbotron">
-    <fieldset>
-      <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>Зарегистрировать новую компанию</h2>
-      {{> afQuickField name='title'}}
-      {{> afQuickField name='description' rows=3}}
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Зарегистрировать компанию</button>
-  </div>
+    <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>Зарегистрировать новую компанию</h2>
+      {{> companyFieldset}}
+    {{> submitInsertFormButtons}}
+  {{/autoForm}}
+</template>
+
+<template name="updateCompanyForm">
+  {{#autoForm collection="Company" doc=userCompany id="updateCompanyForm" type="update"}}
+    <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>Редактирвоать информцию о компании</h2>
+      {{> companyFieldset}}
+      {{> submitUpdateFormButtons}}
+    {{> backFormButton formName="company"}}
   {{/autoForm}}
 </template>

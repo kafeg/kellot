@@ -1,0 +1,33 @@
+<template name="department">
+  {{> pageTitle pageTitle=baseFormTitle}}
+  {{> reactiveTable settings=settings}}
+  {{> addFormButton formName=addFormName}}
+</template>
+
+<template name="departmentFieldset">
+  <fieldset>
+    {{> afQuickField name='title'}}
+  </fieldset>
+</template>
+
+<template name="addDepartmentForm">
+  {{#autoForm collection=collectionName id=addFormName type="insert"}}
+    {{> pageTitle pageTitle=addFormTitle}}
+    {{> UI.dynamic template=filedSetTemplate}}
+    {{> submitInsertFormButtons}}
+    {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="updateDepartmentForm">
+  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
+    {{> pageTitle pageTitle=updateFormTitle}}
+    {{> UI.dynamic template=filedSetTemplate}}
+    {{> submitUpdateFormButtons}}
+    {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="departmentTableActions">
+  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
+</template>

@@ -5,8 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 accounts-password
 accounts-base
 iron:router
@@ -18,7 +16,16 @@ accounts-google
 accounts-twitter
 mrt:accounts-vk
 mquandalle:bower
-less
 mrt:accounts-ui-bootstrap-3
 aldeed:autoform
 aldeed:collection2
+ongoworks:security
+arillo:meteor-x-editable
+aslagle:reactive-table
+anti:i18n
+aramk:collection-table
+mizzao:bootboxjs
+raix:handlebar-helpers
+aldeed:template-extension
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker

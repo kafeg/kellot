@@ -1,0 +1,35 @@
+<template name="holiday">
+  {{> pageTitle pageTitle=baseFormTitle}}
+  {{> reactiveTable settings=settings}}
+  {{> addFormButton formName=addFormName}}
+</template>
+
+<template name="holidayFieldset">
+  <fieldset>
+    {{> afQuickField name='title'}}
+    {{> afQuickField name='holidayDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions }}
+    {{> afQuickField name='repeatPerYear'}}
+  </fieldset>
+</template>
+
+<template name="addHolidayForm">
+  {{#autoForm collection=collectionName id=addFormName type="insert"}}
+  {{> pageTitle pageTitle=addFormTitle}}
+  {{> UI.dynamic template=filedSetTemplate}}
+  {{> submitInsertFormButtons}}
+  {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="updateHolidayForm">
+  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
+  {{> pageTitle pageTitle=updateFormTitle}}
+  {{> UI.dynamic template=filedSetTemplate}}
+  {{> submitUpdateFormButtons}}
+  {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="holidayTableActions">
+  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
+</template>

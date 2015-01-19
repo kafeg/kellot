@@ -2,9 +2,21 @@ if (Meteor.isClient) {
   Template.navItems.helpers({
     activeIfTemplateIs: function (template) {
       var currentRoute = Router.current();
-      //console.log(currentRoute.lookupTemplate(), template);
-      return currentRoute &&
-      template === currentRoute.lookupTemplate() ? 'active' : '';
+      var templates = template.split('|');
+
+      if ( (templates != undefined) && (templates instanceof Array) ) {
+        var isActive = false;
+
+        templates.forEach(function (element, index, array) {
+          var active = currentRoute && element === currentRoute.lookupTemplate();
+          if (active) {
+            isActive = true;;
+          }
+        });
+        return isActive  ? 'active' : '';
+      } else {
+        return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
+      }
     }
   });
 }
