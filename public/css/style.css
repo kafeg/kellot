@@ -8,6 +8,16 @@
   top: 20px;
 }
 
+.top-right-pos-help {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size:9pt;
+  max-width:450px;
+  font-style: italic;
+  text-align: right;
+}
+
 .action-right {
   float:right;
 }
@@ -29,6 +39,11 @@
   background: #D5D5D5;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.icon-preview-transparent {
+  display: block;
+  margin: 10px;
 }
 
 body {

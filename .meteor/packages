@@ -29,3 +29,6 @@ raix:handlebar-helpers
 aldeed:template-extension
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
+natestrauser:select2
+tsega:bootstrap3-datetimepicker
+aldeed:autoform-bs-datetimepicker

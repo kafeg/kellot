@@ -12,10 +12,12 @@ Security.defineMethod("ifCompanyOwner", {
   }
 });
 
-Company.permit(['insert']).ifLoggedIn().apply();
+Company.permit(['insert']).ifLoggedIn().apply();//todo add if dont have a company
 
 Company.permit(['update']).ifUserOwner().apply();
 
 Department.permit(['insert', 'update', 'remove']).ifCompanyOwner().apply();
 
 Holiday.permit(['insert', 'update', 'remove']).ifCompanyOwner().apply();
+
+Staff.permit(['insert', 'update', 'remove']).ifCompanyOwner().apply();

@@ -1,3 +1,35 @@
 <template name="staff">
-  Здесь будет база сотрудников компании
+  {{> pageTitle pageTitle=baseFormTitle}}
+  {{> reactiveTable settings=settings}}
+  {{> addFormButton formName=addFormName}}
+</template>
+
+<template name="staffFieldset">
+  <fieldset>
+    {{> afQuickField name='firstName'}}
+    {{> afQuickField name='lastName'}}
+    {{> afQuickField name='departments'}}
+  </fieldset>
+</template>
+
+<template name="addStaffForm">
+  {{#autoForm collection=collectionName id=addFormName type="insert"}}
+  {{> pageTitle pageTitle=addFormTitle}}
+  {{> UI.dynamic template=fieldSetTemplate}}
+  {{> submitInsertFormButtons}}
+  {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="updateStaffForm">
+  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
+  {{> pageTitle pageTitle=updateFormTitle}}
+  {{> UI.dynamic template=fieldSetTemplate}}
+  {{> submitUpdateFormButtons}}
+  {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="staffTableActions">
+  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
 </template>

@@ -28,7 +28,7 @@ Template.department.helpers({
   backFormName: baseTemplateName,
   updateFormName: "update"+baseTemplateNameF+"Form",
   collectionName: baseTemplateNameF,
-  filedSetTemplate: baseTemplateName+"Fieldset",
+  fieldSetTemplate: baseTemplateName+"Fieldset",
   //titles
   addFormTitle: "Добавить подразделение",
   updateFormTitle: "Редактирвоать подразделение",

@@ -4,9 +4,9 @@
 
 <template name="viewCompanyForm">
   {{#with userCompany}}
+    {{> helpMessage helpMessage='На этой странице находятся общие сведения о Вашей компании и общая статистика. Постепенно информации здесь будет становиться всё больше.'}}
     <h2><div class="icon-preview"><i class="mdi-social-people-outline"></i></div>{{title}}</h2>
     <p>{{description}}</p>
-
     {{> updateFormButton formName="updateCompanyForm"}}
   {{/with}}
 </template>
@@ -20,6 +20,7 @@
 
 <template name="registerNewCompanyForm">
   {{#autoForm collection="Company" id="registerNewCompanyForm" type="insert"}}
+  {{> helpMessage helpMessage='Привет! Судя по всему Вы только что зарегистрировались. Для начала, Вам необходимо ввести самые основные сведения о своей компании! После заполнения данной информации, Вам станут доступны другие пункты меню.'}}
     <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>Зарегистрировать новую компанию</h2>
       {{> companyFieldset}}
     {{> submitInsertFormButtons}}

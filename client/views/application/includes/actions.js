@@ -37,5 +37,3 @@ Template.tableActions.events({
     });
   }
 });
-
-Template.afCheckbox_bootstrap3Full.replaces("afCheckbox_bootstrap3");

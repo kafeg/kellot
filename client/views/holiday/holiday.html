@@ -15,7 +15,7 @@
 <template name="addHolidayForm">
   {{#autoForm collection=collectionName id=addFormName type="insert"}}
   {{> pageTitle pageTitle=addFormTitle}}
-  {{> UI.dynamic template=filedSetTemplate}}
+  {{> UI.dynamic template=fieldSetTemplate}}
   {{> submitInsertFormButtons}}
   {{> backFormButton formName=backFormName}}
   {{/autoForm}}
@@ -24,7 +24,7 @@
 <template name="updateHolidayForm">
   {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
   {{> pageTitle pageTitle=updateFormTitle}}
-  {{> UI.dynamic template=filedSetTemplate}}
+  {{> UI.dynamic template=fieldSetTemplate}}
   {{> submitUpdateFormButtons}}
   {{> backFormButton formName=backFormName}}
   {{/autoForm}}

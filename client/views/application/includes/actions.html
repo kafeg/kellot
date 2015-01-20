@@ -34,13 +34,8 @@
   <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>{{pageTitle}}</h2>
 </template>
 
-<template name="afCheckbox_bootstrap3Full">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="true" {{atts}} />
-      <span class="ripple"></span>
-      <span class="check"></span>
-      {{afFieldLabelText name=this.name}}
-    </label>
-  </div>
+<template name="helpMessage">
+<div class="top-right-pos-help">
+  {{helpMessage}}
+</div>
 </template>
