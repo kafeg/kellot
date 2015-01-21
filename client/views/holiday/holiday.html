@@ -1,4 +1,5 @@
 <template name="holiday">
+  {{> helpMessage helpMessage='Справочник праздников служит для автоматического переноса и расчёта выходных дней. Вы можете заполнять его вручную или полностью отдать автоматике, в этом случае справочник будет учитывать только официально утверждённые законом праздники и переносы выходных дней.'}}
   {{> pageTitle pageTitle=baseFormTitle}}
   {{> reactiveTable settings=settings}}
   {{> addFormButton formName=addFormName}}

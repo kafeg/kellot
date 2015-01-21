@@ -1,4 +1,5 @@
 <template name="staff">
+  {{> helpMessage helpMessage='Перечень сотрудников должен содержать исчерпывающий перечень сотрудников Вашего предприятия, для которых необходимо генерировать ежемесячный табель. Для каждого сотрудника необходимо указать даты приёма/увольнения (или отсавить поле "уволен"  пустым, если сотрудник ещё работает), а также его рабочее время (по умолчанию с 9 до 18 часов) и перечень подразделений, которым он принадлежит.'}}
   {{> pageTitle pageTitle=baseFormTitle}}
   {{> reactiveTable settings=settings}}
   {{> addFormButton formName=addFormName}}
@@ -9,6 +10,10 @@
     {{> afQuickField name='firstName'}}
     {{> afQuickField name='lastName'}}
     {{> afQuickField name='departments'}}
+    {{> afQuickField name='employmentDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
+    {{> afQuickField name='dismissalDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
+    {{> afQuickField name='starWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='09:00'}}
+    {{> afQuickField name='endWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='18:00'}}
   </fieldset>
 </template>
 

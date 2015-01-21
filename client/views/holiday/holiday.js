@@ -11,7 +11,7 @@ Template.holiday.helpers({
       fields:
       [
         { key: 'title', label: 'Праздник' },
-      { key: 'holidayDate', label: 'Дата праздника', fn: function (value, object) { return value.toLocaleDateString(); var valDate = new Date(value); return valDate.format('dd.mm.yyyy'); } },
+      { key: 'holidayDate', label: 'Дата праздника', fn: function (value, object) { return value.toLocaleDateString(); } },
       { key: 'repeatPerYear', label: 'Повторяется ежегодно', fn: function (value, object) { return value ? 'Да' : 'Нет'; } },
         {
           key: 'actions',
