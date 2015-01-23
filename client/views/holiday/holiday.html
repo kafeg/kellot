@@ -1,36 +1,36 @@
 <template name="holiday">
-  {{> helpMessage helpMessage='Справочник праздников служит для автоматического переноса и расчёта выходных дней. Вы можете заполнять его вручную или полностью отдать автоматике, в этом случае справочник будет учитывать только официально утверждённые законом праздники и переносы выходных дней.'}}
-  {{> pageTitle pageTitle=baseFormTitle}}
-  {{> reactiveTable settings=settings}}
-  {{> addFormButton formName=addFormName}}
+    {{> helpMessage helpMessage='Справочник праздников служит для автоматического переноса и расчёта выходных дней. Вы можете заполнять его вручную или полностью отдать автоматике, в этом случае справочник будет учитывать только официально утверждённые законом праздники и переносы выходных дней.'}}
+    {{> pageTitle pageTitle=baseFormTitle}}
+    {{> reactiveTable settings=settings}}
+    {{> addFormButton formName=addFormName}}
 </template>
 
 <template name="holidayFieldset">
-  <fieldset>
-    {{> afQuickField name='title'}}
-    {{> afQuickField name='holidayDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions }}
-    {{> afQuickField name='repeatPerYear'}}
-  </fieldset>
+    <fieldset>
+        {{> afQuickField name='title'}}
+        {{> afQuickField name='holidayDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions }}
+        {{> afQuickField name='repeatPerYear'}}
+    </fieldset>
 </template>
 
 <template name="addHolidayForm">
-  {{#autoForm collection=collectionName id=addFormName type="insert"}}
-  {{> pageTitle pageTitle=addFormTitle}}
-  {{> UI.dynamic template=fieldSetTemplate}}
-  {{> submitInsertFormButtons}}
-  {{> backFormButton formName=backFormName}}
-  {{/autoForm}}
+    {{#autoForm collection=collectionName id=addFormName type="insert"}}
+        {{> pageTitle pageTitle=addFormTitle}}
+        {{> UI.dynamic template=fieldSetTemplate}}
+        {{> submitInsertFormButtons}}
+        {{> backFormButton formName=backFormName}}
+    {{/autoForm}}
 </template>
 
 <template name="updateHolidayForm">
-  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
-  {{> pageTitle pageTitle=updateFormTitle}}
-  {{> UI.dynamic template=fieldSetTemplate}}
-  {{> submitUpdateFormButtons}}
-  {{> backFormButton formName=backFormName}}
-  {{/autoForm}}
+    {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
+        {{> pageTitle pageTitle=updateFormTitle}}
+        {{> UI.dynamic template=fieldSetTemplate}}
+        {{> submitUpdateFormButtons}}
+        {{> backFormButton formName=backFormName}}
+    {{/autoForm}}
 </template>
 
 <template name="holidayTableActions">
-  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
+    {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
 </template>

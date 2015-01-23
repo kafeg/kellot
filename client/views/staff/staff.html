@@ -1,40 +1,40 @@
 <template name="staff">
-  {{> helpMessage helpMessage='Перечень сотрудников должен содержать исчерпывающий перечень сотрудников Вашего предприятия, для которых необходимо генерировать ежемесячный табель. Для каждого сотрудника необходимо указать даты приёма/увольнения (или отсавить поле "уволен"  пустым, если сотрудник ещё работает), а также его рабочее время (по умолчанию с 9 до 18 часов) и перечень подразделений, которым он принадлежит.'}}
-  {{> pageTitle pageTitle=baseFormTitle}}
-  {{> reactiveTable settings=settings}}
-  {{> addFormButton formName=addFormName}}
+    {{> helpMessage helpMessage='Перечень сотрудников должен содержать исчерпывающий перечень сотрудников Вашего предприятия, для которых необходимо генерировать ежемесячный табель. Для каждого сотрудника необходимо указать даты приёма/увольнения (или отсавить поле "уволен"  пустым, если сотрудник ещё работает), а также его рабочее время (по умолчанию с 9 до 18 часов) и перечень подразделений, которым он принадлежит.'}}
+    {{> pageTitle pageTitle=baseFormTitle}}
+    {{> reactiveTable settings=settings}}
+    {{> addFormButton formName=addFormName}}
 </template>
 
 <template name="staffFieldset">
-  <fieldset>
-    {{> afQuickField name='firstName'}}
-    {{> afQuickField name='lastName'}}
-    {{> afQuickField name='departments'}}
-    {{> afQuickField name='employmentDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
-    {{> afQuickField name='dismissalDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
-    {{> afQuickField name='starWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='09:00'}}
-    {{> afQuickField name='endWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='18:00'}}
-  </fieldset>
+    <fieldset>
+        {{> afQuickField name='firstName'}}
+        {{> afQuickField name='lastName'}}
+        {{> afQuickField name='departments'}}
+        {{> afQuickField name='employmentDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
+        {{> afQuickField name='dismissalDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
+        {{> afQuickField name='starWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='09:00'}}
+        {{> afQuickField name='endWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='18:00'}}
+    </fieldset>
 </template>
 
 <template name="addStaffForm">
-  {{#autoForm collection=collectionName id=addFormName type="insert"}}
-  {{> pageTitle pageTitle=addFormTitle}}
-  {{> UI.dynamic template=fieldSetTemplate}}
-  {{> submitInsertFormButtons}}
-  {{> backFormButton formName=backFormName}}
-  {{/autoForm}}
+    {{#autoForm collection=collectionName id=addFormName type="insert"}}
+        {{> pageTitle pageTitle=addFormTitle}}
+        {{> UI.dynamic template=fieldSetTemplate}}
+        {{> submitInsertFormButtons}}
+        {{> backFormButton formName=backFormName}}
+    {{/autoForm}}
 </template>
 
 <template name="updateStaffForm">
-  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
-  {{> pageTitle pageTitle=updateFormTitle}}
-  {{> UI.dynamic template=fieldSetTemplate}}
-  {{> submitUpdateFormButtons}}
-  {{> backFormButton formName=backFormName}}
-  {{/autoForm}}
+    {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
+        {{> pageTitle pageTitle=updateFormTitle}}
+        {{> UI.dynamic template=fieldSetTemplate}}
+        {{> submitUpdateFormButtons}}
+        {{> backFormButton formName=backFormName}}
+    {{/autoForm}}
 </template>
 
 <template name="staffTableActions">
-  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
+    {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
 </template>

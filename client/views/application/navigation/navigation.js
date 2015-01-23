@@ -1,31 +1,32 @@
 if (Meteor.isClient) {
-  Template.navItems.helpers({
-    activeIfTemplateIs: function (template) {
-      var currentRoute = Router.current();
-      var templates = template.split('|');
+    Template.navItems.helpers({
+        activeIfTemplateIs: function (template) {
+            var currentRoute = Router.current();
+            var templates = template.split('|');
 
-      if ( (templates != undefined) && (templates instanceof Array) ) {
-        var isActive = false;
+            if ((templates != undefined) && (templates instanceof Array)) {
+                var isActive = false;
 
-        templates.forEach(function (element, index, array) {
-          var active = currentRoute && element === currentRoute.lookupTemplate();
-          if (active) {
-            isActive = true;;
-          }
-        });
-        return isActive  ? 'active' : '';
-      } else {
-        return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
-      }
-    }
-  });
+                templates.forEach(function (element, index, array) {
+                    var active = currentRoute && element === currentRoute.lookupTemplate();
+                    if (active) {
+                        isActive = true;
+                        ;
+                    }
+                });
+                return isActive ? 'active' : '';
+            } else {
+                return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
+            }
+        }
+    });
 }
 
 Template.navItems.events({
-  'click #logoutLink' : function(e, t) {
-    Meteor.logout();
-    Alerts.removeSeen();
-    Alerts.add('Вы вышли из системы!', 'success');
-    Router.go('loginForm');
-  }
+    'click #logoutLink': function (e, t) {
+        Meteor.logout();
+        Alerts.removeSeen();
+        Alerts.add('Вы вышли из системы!', 'success');
+        Router.go('loginForm');
+    }
 });

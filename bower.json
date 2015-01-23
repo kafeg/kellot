@@ -1,7 +1,26 @@
 {
-  "name": "my-app",
+  "name": "kellot",
   "version": "0.0.1",
   "dependencies": {
+    "bootstrap-material-design": "~0.2.1"
   },
-  "private": true
+  "private": true,
+  "authors": [
+    "Vitaliy Petrov <v31337@gmail.com>"
+  ],
+  "description": "Kellot - softwatre for staff time control",
+  "main": "readme.txt",
+  "moduleType": [
+    "node"
+  ],
+  "license": "Commercial",
+  "homepage": "http://kellot.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    ".meteor/local/bower",
+    "test",
+    "tests"
+  ]
 }

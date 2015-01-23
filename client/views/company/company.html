@@ -3,35 +3,42 @@
 </template>
 
 <template name="viewCompanyForm">
-  {{#with userCompany}}
-    {{> helpMessage helpMessage='На этой странице находятся общие сведения о Вашей компании и общая статистика. Постепенно информации здесь будет становиться всё больше.'}}
-    <h2><div class="icon-preview"><i class="mdi-social-people-outline"></i></div>{{title}}</h2>
-    <p>{{description}}</p>
-    {{> updateFormButton formName="updateCompanyForm"}}
-  {{/with}}
+    {{#with userCompany}}
+        {{> helpMessage helpMessage='На этой странице находятся общие сведения о Вашей компании и общая статистика. Постепенно информации здесь будет становиться всё больше.'}}
+        <h2>
+            <div class="icon-preview"><i class="mdi-social-people-outline"></i></div>{{title}}</h2>
+        <p>{{description}}</p>
+        {{> updateFormButton formName="updateCompanyForm"}}
+    {{/with}}
 </template>
 
 <template name="companyFieldset">
-  <fieldset>
-    {{> afQuickField name='title'}}
-    {{> afQuickField name='description' rows=3}}
-  </fieldset>
+    <fieldset>
+        {{> afQuickField name='title'}}
+        {{> afQuickField name='description' rows=3}}
+    </fieldset>
 </template>
 
 <template name="registerNewCompanyForm">
-  {{#autoForm collection="Company" id="registerNewCompanyForm" type="insert"}}
-  {{> helpMessage helpMessage='Привет! Судя по всему Вы только что зарегистрировались. Для начала, Вам необходимо ввести самые основные сведения о своей компании! После заполнения данной информации, Вам станут доступны другие пункты меню.'}}
-    <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>Зарегистрировать новую компанию</h2>
-      {{> companyFieldset}}
-    {{> submitInsertFormButtons}}
-  {{/autoForm}}
+    {{#autoForm collection="Company" id="registerNewCompanyForm" type="insert"}}
+        {{> helpMessage helpMessage='Привет! Судя по всему Вы только что зарегистрировались. Для начала, Вам необходимо ввести самые основные сведения о своей компании! После заполнения данной информации, Вам станут доступны другие пункты меню.'}}
+        <h2>
+            <div class="icon-preview"><i class="mdi-social-group"></i></div>
+            Зарегистрировать новую компанию
+        </h2>
+        {{> companyFieldset}}
+        {{> submitInsertFormButtons}}
+    {{/autoForm}}
 </template>
 
 <template name="updateCompanyForm">
-  {{#autoForm collection="Company" doc=userCompany id="updateCompanyForm" type="update"}}
-    <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>Редактирвоать информцию о компании</h2>
-      {{> companyFieldset}}
-      {{> submitUpdateFormButtons}}
-    {{> backFormButton formName="company"}}
-  {{/autoForm}}
+    {{#autoForm collection="Company" doc=userCompany id="updateCompanyForm" type="update"}}
+        <h2>
+            <div class="icon-preview"><i class="mdi-social-group"></i></div>
+            Редактирвоать информцию о компании
+        </h2>
+        {{> companyFieldset}}
+        {{> submitUpdateFormButtons}}
+        {{> backFormButton formName="company"}}
+    {{/autoForm}}
 </template>

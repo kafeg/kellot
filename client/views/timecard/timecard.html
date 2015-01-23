@@ -1,3 +1,67 @@
-<template name="timeCard">
-  ololosh
+<template name="timecard">
+  {{> helpMessage helpMessage='Табель учёта рабочег овремени сотрудников Вашей компании. Это Ваш основной рабочий инструмент. Все сотрудники из справочника появляются здесь автоматически.'}}
+  {{> pageTitle pageTitle=baseFormTitle}}
+  {{> reactiveTable settings=settings}}
+    <style>
+        .container {
+            width:99%;
+        }
+        .reactive-table {
+            font-size: 11px;
+        }
+        .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+            padding: 1px;
+        }
+        /*.editable-click, a.editable-click, a.editable-click:hover {*/
+            /*color: lightblue;*/
+            /*border-bottom: 0px;*/
+            /*cursor: pointer;*/
+        /*}*/
+        .popover, .tooltip-inner {
+            background: white;
+        }
+        .popover.top .arrow:after, .tooltip.top .arrow:after, .popover.top .tooltip-arrow, .tooltip.top .tooltip-arrow {
+            border-top-color: white;
+        }
+        .editable-input {
+            line-height: 4.5;
+        }
+        .editable-input select {
+            font-size: 14px;
+        }
+    </style>
+</template>
+
+<template name="timecardFieldset">
+  <fieldset>
+    {{> afQuickField name='firstName'}}
+    {{> afQuickField name='lastName'}}
+    {{> afQuickField name='departments'}}
+    {{> afQuickField name='employmentDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
+    {{> afQuickField name='dismissalDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
+    {{> afQuickField name='starWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='09:00'}}
+    {{> afQuickField name='endWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='18:00'}}
+  </fieldset>
+</template>
+
+<template name="addTimecardForm">
+  {{#autoForm collection=collectionName id=addFormName type="insert"}}
+  {{> pageTitle pageTitle=addFormTitle}}
+  {{> UI.dynamic template=fieldSetTemplate}}
+  {{> submitInsertFormButtons}}
+  {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="updateTimecardForm">
+  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
+  {{> pageTitle pageTitle=updateFormTitle}}
+  {{> UI.dynamic template=fieldSetTemplate}}
+  {{> submitUpdateFormButtons}}
+  {{> backFormButton formName=backFormName}}
+  {{/autoForm}}
+</template>
+
+<template name="timecardTableActions">
+  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
 </template>

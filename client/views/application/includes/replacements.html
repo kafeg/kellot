@@ -1,25 +1,25 @@
 <template name="afCheckbox_bootstrap3Full">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="true" {{atts}} />
-      <span class="ripple"></span>
-      <span class="check"></span>
-      {{afFieldLabelText name=this.name}}
-    </label>
-  </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="true" {{atts}} />
+            <span class="ripple"></span>
+            <span class="check"></span>
+            {{afFieldLabelText name=this.name}}
+        </label>
+    </div>
 </template>
 
 <template name="afCheckboxGroup_bootstrap3Full">
-  <div class="af-checkbox-group" {{dsk}}>
-    {{#each this.items}}
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="{{this.value}}" {{atts}} />
-        <span class="ripple"></span>
-        <span class="check"></span>
-        {{this.label}}
-      </label>
+    <div class="af-checkbox-group" {{dsk}}>
+        {{#each this.items}}
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="{{this.value}}" {{atts}} />
+                    <span class="ripple"></span>
+                    <span class="check"></span>
+                    {{this.label}}
+                </label>
+            </div>
+        {{/each}}
     </div>
-    {{/each}}
-  </div>
 </template>
