@@ -20,7 +20,6 @@ mrt:accounts-ui-bootstrap-3
 aldeed:autoform
 aldeed:collection2
 ongoworks:security
-arillo:meteor-x-editable
 aslagle:reactive-table
 anti:i18n
 aramk:collection-table
@@ -33,4 +32,3 @@ natestrauser:select2
 tsega:bootstrap3-datetimepicker
 aldeed:autoform-bs-datetimepicker
 audit-argument-checks
-natestrauser:x-editable-bootstrap
