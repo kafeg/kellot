@@ -73,3 +73,13 @@ body .well {
 th.departments {
   width: 50%;
 }
+
+#timcardTable td.d1, #timcardTable td.d2, #timcardTable td.d3, #timcardTable td.d4, #timcardTable td.d5, #timcardTable td.d6, #timcardTable td.d7, #timcardTable td.d8,
+#timcardTable td.d9, #timcardTable td.d10, #timcardTable td.d11, #timcardTable td.d12, #timcardTable td.d13, #timcardTable td.d14, #timcardTable td.d15, #timcardTable td.d16,
+#timcardTable td.d17, #timcardTable td.d18, #timcardTable td.d19, #timcardTable td.d20, #timcardTable td.d21, #timcardTable td.d22, #timcardTable td.d23, #timcardTable td.d24,
+#timcardTable td.d25, #timcardTable td.d26, #timcardTable td.d27, #timcardTable td.d28, #timcardTable td.d29, #timcardTable td.d30, #timcardTable td.d31, #timcardTable td.hospitalDays,
+#timcardTable td.workHoursAndMinuts,  #timcardTable td.workHours,  #timcardTable td.workHoursAndMinutsAtHolidays,  #timcardTable td.workHoursAtHolidays {
+  text-align: center;
+}
+
+.timecardNotEditedTd { background-color: gainsboro !important; }

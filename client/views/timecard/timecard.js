@@ -1,6 +1,10 @@
 var baseTemplateName = "timecard";
 var baseTemplateNameF = "Timecard";
 
+function getTdBgColor(objNum, object) {
+    return object['du'+objNum] ? '' : 'timecardNotEdited';
+}
+
 Template.timecard.helpers({
     settings: function () {
         return {
@@ -8,6 +12,7 @@ Template.timecard.helpers({
             rowsPerPage: 30,
             showNavigation: 'always',
             showFilter: false,
+            id: 'timcardTable',
             //useFontAwesome: true,
             fields: [
                 {
@@ -18,157 +23,157 @@ Template.timecard.helpers({
                 },
                 {
                     key: 'd1', label: '1', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="1" data-val="' + value + '" data-valtype="' + object.dt1 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('1', object)+'" data-id="' + object._id + '" data-num="1" data-val="' + value + '" data-valtype="' + object.dt1 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd2', label: '2', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="2" data-val="' + value + '" data-valtype="' + object.dt2 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('2', object)+'" data-id="' + object._id + '" data-num="2" data-val="' + value + '" data-valtype="' + object.dt2 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd3', label: '3', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="3" data-val="' + value + '" data-valtype="' + object.dt3 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('3', object)+'" data-id="' + object._id + '" data-num="3" data-val="' + value + '" data-valtype="' + object.dt3 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd4', label: '4', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="4" data-val="' + value + '" data-valtype="' + object.dt4 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('4', object)+'" data-id="' + object._id + '" data-num="4" data-val="' + value + '" data-valtype="' + object.dt4 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd5', label: '5', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="5" data-val="' + value + '" data-valtype="' + object.dt5 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('5', object)+'" data-id="' + object._id + '" data-num="5" data-val="' + value + '" data-valtype="' + object.dt5 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd6', label: '6', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="6" data-val="' + value + '" data-valtype="' + object.dt6 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('6', object)+'" data-id="' + object._id + '" data-num="6" data-val="' + value + '" data-valtype="' + object.dt6 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd7', label: '7', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="7" data-val="' + value + '" data-valtype="' + object.dt7 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('7', object)+'" data-id="' + object._id + '" data-num="7" data-val="' + value + '" data-valtype="' + object.dt7 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd8', label: '8', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="8" data-val="' + value + '" data-valtype="' + object.dt8 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('8', object)+'" data-id="' + object._id + '" data-num="8" data-val="' + value + '" data-valtype="' + object.dt8 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd9', label: '9', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="9" data-val="' + value + '" data-valtype="' + object.dt9 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('9', object)+'" data-id="' + object._id + '" data-num="9" data-val="' + value + '" data-valtype="' + object.dt9 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd10', label: '10', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="10" data-val="' + value + '" data-valtype="' + object.dt10 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('10', object)+'" data-id="' + object._id + '" data-num="10" data-val="' + value + '" data-valtype="' + object.dt10 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd11', label: '11', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="11" data-val="' + value + '" data-valtype="' + object.dt11 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('11', object)+'" data-id="' + object._id + '" data-num="11" data-val="' + value + '" data-valtype="' + object.dt11 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd12', label: '12', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="12" data-val="' + value + '" data-valtype="' + object.dt12 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('12', object)+'" data-id="' + object._id + '" data-num="12" data-val="' + value + '" data-valtype="' + object.dt12 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd13', label: '13', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="13" data-val="' + value + '" data-valtype="' + object.dt13 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('13', object)+'" data-id="' + object._id + '" data-num="13" data-val="' + value + '" data-valtype="' + object.dt13 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd14', label: '14', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="14" data-val="' + value + '" data-valtype="' + object.dt14 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('14', object)+'" data-id="' + object._id + '" data-num="14" data-val="' + value + '" data-valtype="' + object.dt14 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd15', label: '15', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="15" data-val="' + value + '" data-valtype="' + object.dt15 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('15', object)+'" data-id="' + object._id + '" data-num="15" data-val="' + value + '" data-valtype="' + object.dt15 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd16', label: '16', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="16" data-val="' + value + '" data-valtype="' + object.dt16 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('16', object)+'" data-id="' + object._id + '" data-num="16" data-val="' + value + '" data-valtype="' + object.dt16 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd17', label: '17', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="17" data-val="' + value + '" data-valtype="' + object.dt17 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('17', object)+'" data-id="' + object._id + '" data-num="17" data-val="' + value + '" data-valtype="' + object.dt17 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd18', label: '18', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="18" data-val="' + value + '" data-valtype="' + object.dt18 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('18', object)+'" data-id="' + object._id + '" data-num="18" data-val="' + value + '" data-valtype="' + object.dt18 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd19', label: '19', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="19" data-val="' + value + '" data-valtype="' + object.dt19 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('19', object)+'" data-id="' + object._id + '" data-num="19" data-val="' + value + '" data-valtype="' + object.dt19 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd20', label: '20', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="20" data-val="' + value + '" data-valtype="' + object.dt20 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('20', object)+'" data-id="' + object._id + '" data-num="20" data-val="' + value + '" data-valtype="' + object.dt20 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd21', label: '21', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="21" data-val="' + value + '" data-valtype="' + object.dt21 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('21', object)+'" data-id="' + object._id + '" data-num="21" data-val="' + value + '" data-valtype="' + object.dt21 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd22', label: '22', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="22" data-val="' + value + '" data-valtype="' + object.dt22 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('22', object)+'" data-id="' + object._id + '" data-num="22" data-val="' + value + '" data-valtype="' + object.dt22 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd23', label: '23', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="23" data-val="' + value + '" data-valtype="' + object.dt23 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('23', object)+'" data-id="' + object._id + '" data-num="23" data-val="' + value + '" data-valtype="' + object.dt23 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd24', label: '24', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="24" data-val="' + value + '" data-valtype="' + object.dt24 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('24', object)+'" data-id="' + object._id + '" data-num="24" data-val="' + value + '" data-valtype="' + object.dt24 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd25', label: '25', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="25" data-val="' + value + '" data-valtype="' + object.dt25 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('25', object)+'" data-id="' + object._id + '" data-num="25" data-val="' + value + '" data-valtype="' + object.dt25 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd26', label: '26', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="26" data-val="' + value + '" data-valtype="' + object.dt26 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('26', object)+'" data-id="' + object._id + '" data-num="26" data-val="' + value + '" data-valtype="' + object.dt26 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd27', label: '27', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="27" data-val="' + value + '" data-valtype="' + object.dt27 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('27', object)+'" data-id="' + object._id + '" data-num="27" data-val="' + value + '" data-valtype="' + object.dt27 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd28', label: '28', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="28" data-val="' + value + '" data-valtype="' + object.dt28 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('28', object)+'" data-id="' + object._id + '" data-num="28" data-val="' + value + '" data-valtype="' + object.dt28 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd29', label: '29', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="29" data-val="' + value + '" data-valtype="' + object.dt29 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('29', object)+'" data-id="' + object._id + '" data-num="29" data-val="' + value + '" data-valtype="' + object.dt29 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd30', label: '30', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="30" data-val="' + value + '" data-valtype="' + object.dt30 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('30', object)+'" data-id="' + object._id + '" data-num="30" data-val="' + value + '" data-valtype="' + object.dt30 + '">' + value + '</a>');
                 }
                 },
                 {
                     key: 'd31', label: '31', fn: function (value, object) {
-                    return new Spacebars.SafeString('<a href="#" class="timecardEditable" data-id="' + object._id + '" data-num="31" data-val="' + value + '" data-valtype="' + object.dt31 + '">' + value + '</a>');
+                    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('31', object)+'" data-id="' + object._id + '" data-num="31" data-val="' + value + '" data-valtype="' + object.dt31 + '">' + value + '</a>');
                 }
                 },
                 {key: 'hospitalDays', label: 'Бол.'},
@@ -227,25 +232,29 @@ Template.timecard.created = function () {
             Meteor.call('timecardUpdater', id, num, val, valtype, function (error, result) {
                 if (error) {
                     bootbox.alert("Ошибка доступа к данным. Пожалуйста обратитесь в службу поддержки! Подробности: " + error.reason);
+                } else {
+                    //console.log(element);
+                    $(element).parent().removeClass('timecardNotEditedTd');
+                    //$('.timecardEditable').parent().removeAttr( 'style' );
+                    //$('.timecardNotEdited').parent().css('background-color', 'lightgray');
                 }
             });
         }
     });
 };
 
-function getBackgroundColor( index, currentvalue, element ) {
-    var num = $(element).attr('data-num');
-    var id = $(element).attr('data-id');
-    var val = $(element).attr('data-val');
-    var valtype = $(element).attr('data-valtype');
-    console.log(num,  id, val, valtype);
-    return 'blue';
-}
+//function getBackgroundColor( index, currentvalue, element ) {
+//    var num = $(element).attr('data-num');
+//    var id = $(element).attr('data-id');
+//    var val = $(element).attr('data-val');
+//    var valtype = $(element).attr('data-valtype');
+//    console.log(num,  id, val, valtype);
+//    return 'blue';
+//}
 
 Template.timecard.rendered = function () {
-    //$('.timecardEditable').parent().css('background-color', function() {
-    //    return getBackgroundColor(this);
-    //});
+    $('.timecardNotEdited').parent().addClass('timecardNotEditedTd');
+
     //generate values for timecardSource DO NOT DELETE
     //for (var i = 7; i >= 0; i--) {
     //    for (var j = 59; j >= 0; j--) {
@@ -540,13 +549,22 @@ var timecardSpecCodesSource = [
 var timecardSource = [
     //quick hours
     { value:"08:00", text:"08:00"},
+    { value:"07:30", text:"07:30"},
     { value:"07:00", text:"07:00"},
+    { value:"06:30", text:"06:30"},
     { value:"06:00", text:"06:00"},
+    { value:"05:30", text:"05:30"},
     { value:"05:00", text:"05:00"},
+    { value:"04:30", text:"04:30"},
     { value:"04:00", text:"04:00"},
+    { value:"03:30", text:"03:30"},
     { value:"03:00", text:"03:00"},
+    { value:"02:30", text:"02:30"},
     { value:"02:00", text:"02:00"},
+    { value:"01:30", text:"01:30"},
     { value:"01:00", text:"01:00"},
+    { value:"00:30", text:"00:30"},
+    { value:"00:00", text:"00:00"},
     //other times
     { value:"07:59", text:"07:59"},
     { value:"07:58", text:"07:58"},
@@ -1027,5 +1045,22 @@ var timecardSource = [
     { value:"00:03", text:"00:03"},
     { value:"00:02", text:"00:02"},
     { value:"00:01", text:"00:01"},
+    //quick hours two
+    { value:"08:00", text:"08:00"},
+    { value:"07:30", text:"07:30"},
+    { value:"07:00", text:"07:00"},
+    { value:"06:30", text:"06:30"},
+    { value:"06:00", text:"06:00"},
+    { value:"05:30", text:"05:30"},
+    { value:"05:00", text:"05:00"},
+    { value:"04:30", text:"04:30"},
+    { value:"04:00", text:"04:00"},
+    { value:"03:30", text:"03:30"},
+    { value:"03:00", text:"03:00"},
+    { value:"02:30", text:"02:30"},
+    { value:"02:00", text:"02:00"},
+    { value:"01:30", text:"01:30"},
+    { value:"01:00", text:"01:00"},
+    { value:"00:30", text:"00:30"},
     { value:"00:00", text:"00:00"}
 ];
