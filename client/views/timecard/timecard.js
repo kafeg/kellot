@@ -5,7 +5,7 @@ Template.timecard.helpers({
     settings: function () {
         return {
             collection: Timecard.find(),
-            rowsPerPage: 10,
+            rowsPerPage: 30,
             showNavigation: 'always',
             showFilter: false,
             //useFontAwesome: true,
@@ -197,12 +197,21 @@ Template.timecard.helpers({
     }
 });
 
-Template.timecard.rendered = function () {
-    timecardGenerator();
-    registerNewEditableTypes();
+Template.timecard.created = function () {
 
-    //$('#reactive-table-1 tbody').unbind();
-    //console.log('unbinded');
+    registerNewEditableTypes();
+    Tracker.autorun(function () {
+        console.log('staffUpdated');
+        if (Staff.find().count()) {
+            timecardGenerator();
+            //Meteor.call('exportT12', 2015, 0, function (error, result) {
+            //    if (error) {
+            //        bootbox.alert("Ошибка доступа к данным. Пожалуйста обратитесь в службу поддержки! Подробности: " + error.reason);
+            //    }
+            //});
+        }
+    });
+
     $('body').editable({
         selector: '.timecardEditable',
         type:'timecard',
@@ -222,8 +231,22 @@ Template.timecard.rendered = function () {
             });
         }
     });
+};
 
-    //generate values for timecardSource
+function getBackgroundColor( index, currentvalue, element ) {
+    var num = $(element).attr('data-num');
+    var id = $(element).attr('data-id');
+    var val = $(element).attr('data-val');
+    var valtype = $(element).attr('data-valtype');
+    console.log(num,  id, val, valtype);
+    return 'blue';
+}
+
+Template.timecard.rendered = function () {
+    //$('.timecardEditable').parent().css('background-color', function() {
+    //    return getBackgroundColor(this);
+    //});
+    //generate values for timecardSource DO NOT DELETE
     //for (var i = 7; i >= 0; i--) {
     //    for (var j = 59; j >= 0; j--) {
     //        var h = '"0' + i;
@@ -233,26 +256,14 @@ Template.timecard.rendered = function () {
     //}
 };
 
-Template.addTimecardForm.inheritsHelpersFrom(baseTemplateName);
-Template.updateTimecardForm.inheritsHelpersFrom(baseTemplateName);
 Template.timecardTableActions.inheritsHelpersFrom(baseTemplateName);
-Template.timecardFieldset.inheritsHelpersFrom(baseTemplateName);
-
-//hack, but default widgetcode not work =((
-Template.addTimecardForm.rendered = function () {
-    $('[name=starWorkTime]').data("DateTimePicker").setDate('09:00');
-    $('[name=endWorkTime]').data("DateTimePicker").setDate('18:00');
-};
-Template.updateTimecardForm.rendered = function () {
-    $('[name=starWorkTime]').data("DateTimePicker").setDate(this.data.starWorkTime);
-    $('[name=endWorkTime]').data("DateTimePicker").setDate(this.data.endWorkTime);
-};
 
 Router.map(function () {
     this.route(baseTemplateName, {
         path: '/' + baseTemplateName,
         waitOn: function () {
             Meteor.subscribe('company', Meteor.userId());
+            Meteor.subscribe('timecard', Meteor.userId());
         }
     });
     this.route('add' + baseTemplateNameF + 'Form', {
@@ -266,19 +277,6 @@ Router.map(function () {
     });
 });
 
-AutoForm.hooks({
-    addTimecardForm: {
-        onSuccess: function (operation, result, template) {
-            Router.go(baseTemplateName);
-        }
-    },
-    updateTimecardForm: {
-        onSuccess: function (operation, result, template) {
-            Router.go(baseTemplateName);
-        }
-    }
-});
-
 function timecardGenerator() {
     //var company = UI._globalHelpers.userCompany();
     var params = [];
@@ -290,6 +288,8 @@ function timecardGenerator() {
     Meteor.call('timecardGenerator', currentYear, currentMonthId, function (error, result) {
         if (error) {
             bootbox.alert("Ошибка доступа к данным. Пожалуйста обратитесь в службу поддержки! Подробности: " + error.reason);
+        } else {
+            Meteor.subscribe('timecard', Meteor.userId());
         }
     });
     return 0;

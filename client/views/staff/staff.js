@@ -71,7 +71,7 @@ Template.staff.helpers({
     },
     datetimepickerOptions: function () {
         return {format: 'HH:mm', pickDate: false, useCurrent: false}
-    },
+    }
 });
 
 Template.addStaffForm.inheritsHelpersFrom(baseTemplateName);
@@ -83,11 +83,11 @@ Template.staffFieldset.inheritsHelpersFrom(baseTemplateName);
 Template.addStaffForm.rendered = function () {
     $('[name=starWorkTime]').data("DateTimePicker").setDate('09:00');
     $('[name=endWorkTime]').data("DateTimePicker").setDate('18:00');
-}
+};
 Template.updateStaffForm.rendered = function () {
     $('[name=starWorkTime]').data("DateTimePicker").setDate(this.data.starWorkTime);
     $('[name=endWorkTime]').data("DateTimePicker").setDate(this.data.endWorkTime);
-}
+};
 
 Router.map(function () {
     //console.log('setup', 'add'+baseTemplateNameF+'Form');
@@ -95,7 +95,7 @@ Router.map(function () {
         path: '/' + baseTemplateName,
         waitOn: function () {
             return Meteor.subscribe('company', Meteor.userId());
-        },
+        }
         //waitOn: function() { return Meteor.subscribe('staff', Meteor.userId()); }
     });
     this.route('add' + baseTemplateNameF + 'Form', {
@@ -115,11 +115,11 @@ AutoForm.hooks({
     addStaffForm: {
         onSuccess: function (operation, result, template) {
             Router.go(baseTemplateName);
-        },
+        }
     },
     updateStaffForm: {
         onSuccess: function (operation, result, template) {
             Router.go(baseTemplateName);
-        },
+        }
     }
 });

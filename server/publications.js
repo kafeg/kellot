@@ -49,17 +49,21 @@ Meteor.publish('holiday', function (userId) {
 Meteor.publish('staff', function (userId) {
   check(userId, Match.Any);
 
+  var staffCollection;
+
   if (this.userId != null) {
     var company = Company.findOne({userId: this.userId});
     if (company != undefined) {
       var companyId = company._id;
-      return Staff.find({companyId: Company.findOne({userId: userId})._id});
+      staffCollection = Staff.find({companyId: Company.findOne({userId: userId})._id});
     } else {
-      return Staff.find({companyId: '0'});
+      staffCollection = Staff.find({companyId: '0'});
     }
   } else {
-    return Staff.find({companyId: '0'});
+    staffCollection = Staff.find({companyId: '0'});
   }
+
+  return staffCollection;
 });
 
 Meteor.publish('timecard', function (userId) {
@@ -68,16 +72,10 @@ Meteor.publish('timecard', function (userId) {
   if (this.userId != null) {
     var company = Company.findOne({userId: this.userId}); //todo associated with company user!
     if (company != undefined) {
-      var companyId = company._id;
-
-      var staffs = Staff.find({companyId: companyId}, {fields: {_id: 1}}).fetch();
-      var staffIds = [];
-      staffs.forEach(function outputItem(item, i, arr) {
-            staffIds.push(item._id);
-          }
-      );
-
-      return Timecard.find({companyId: companyId, staffId: {$in: staffIds}});
+          var companyId = company._id;
+          var staffs = Staff.find({companyId: companyId}, {fields: {_id: 1}}).fetch();
+          var staffIds = staffs.map(function(doc) { return doc._id });
+          return Timecard.find({companyId: companyId, staffId: {$in: staffIds}});
     } else {
       return Timecard.find({companyId: '0'});
     }

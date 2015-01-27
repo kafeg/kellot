@@ -1,7 +1,15 @@
 <template name="timecard">
-  {{> helpMessage helpMessage='Табель учёта рабочег овремени сотрудников Вашей компании. Это Ваш основной рабочий инструмент. Все сотрудники из справочника появляются здесь автоматически.'}}
-  {{> pageTitle pageTitle=baseFormTitle}}
-  {{> reactiveTable settings=settings}}
+    {{> helpMessage helpMessage='Табель учёта рабочего времени сотрудников Вашей компании. Это Ваш основной рабочий инструмент. Все сотрудники из справочника появляются здесь автоматически.'}}
+    {{> pageTitle pageTitle=baseFormTitle}}
+    <div class="btn-group top-right-pos-btns">
+        <a href="javascript:void(0)" class="btn btn-primary">Excel<div class="ripple-wrapper"></div></a>
+        <a href="javascript:void(0)" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-wrapper"></div></a>
+        <ul class="dropdown-menu">
+            <li><a href="#" id="generateExcelT12">Форма Т12</a></li>
+            <li><a href="#" id="generateExcelT13">Форма Т13</a></li>
+        </ul>
+    </div>
+    {{> reactiveTable settings=settings}}
     <style>
         .container {
             width:99%;
@@ -13,9 +21,9 @@
             padding: 1px;
         }
         /*.editable-click, a.editable-click, a.editable-click:hover {*/
-            /*color: lightblue;*/
-            /*border-bottom: 0px;*/
-            /*cursor: pointer;*/
+        /*color: lightblue;*/
+        /*border-bottom: 0px;*/
+        /*cursor: pointer;*/
         /*}*/
         .popover, .tooltip-inner {
             background: white;
@@ -32,36 +40,6 @@
     </style>
 </template>
 
-<template name="timecardFieldset">
-  <fieldset>
-    {{> afQuickField name='firstName'}}
-    {{> afQuickField name='lastName'}}
-    {{> afQuickField name='departments'}}
-    {{> afQuickField name='employmentDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
-    {{> afQuickField name='dismissalDate' type='bootstrap-datepicker' datePickerOptions=datepickerOptions}}
-    {{> afQuickField name='starWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='09:00'}}
-    {{> afQuickField name='endWorkTime' type='bootstrap-datetimepicker' dateTimePickerOptions=datetimepickerOptions value='18:00'}}
-  </fieldset>
-</template>
-
-<template name="addTimecardForm">
-  {{#autoForm collection=collectionName id=addFormName type="insert"}}
-  {{> pageTitle pageTitle=addFormTitle}}
-  {{> UI.dynamic template=fieldSetTemplate}}
-  {{> submitInsertFormButtons}}
-  {{> backFormButton formName=backFormName}}
-  {{/autoForm}}
-</template>
-
-<template name="updateTimecardForm">
-  {{#autoForm collection=collectionName doc=this id=updateFormName type="update"}}
-  {{> pageTitle pageTitle=updateFormTitle}}
-  {{> UI.dynamic template=fieldSetTemplate}}
-  {{> submitUpdateFormButtons}}
-  {{> backFormButton formName=backFormName}}
-  {{/autoForm}}
-</template>
-
 <template name="timecardTableActions">
-  {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
+    {{> tableActions collection=collectionName id=_id updateFormName=updateFormName}}
 </template>

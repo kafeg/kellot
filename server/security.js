@@ -21,3 +21,5 @@ Department.permit(['insert', 'update', 'remove']).ifCompanyOwner().apply();
 Holiday.permit(['insert', 'update', 'remove']).ifCompanyOwner().apply();
 
 Staff.permit(['insert', 'update', 'remove']).ifCompanyOwner().apply();
+
+Timecard.permit(['insert']).ifCompanyOwner().apply();

@@ -18,6 +18,12 @@
   text-align: right;
 }
 
+.top-right-pos-btns {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
 .action-right {
   float:right;
 }
