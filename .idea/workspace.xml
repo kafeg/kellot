@@ -37,8 +37,8 @@
       <file leaf-file-name="timecard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/pdfmake/timecard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86923075" vertical-offset="4224" max-vertical-offset="5219">
-              <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7945055" vertical-offset="4309" max-vertical-offset="5219">
+              <caret line="296" column="10" selection-start-line="296" selection-start-column="10" selection-end-line="296" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -915,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/pdfmake/timecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86923075" vertical-offset="4224" max-vertical-offset="5219">
-          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7945055" vertical-offset="4309" max-vertical-offset="5219">
+          <caret line="296" column="10" selection-start-line="296" selection-start-column="10" selection-end-line="296" selection-end-column="10" />
           <folding />
         </state>
       </provider>
