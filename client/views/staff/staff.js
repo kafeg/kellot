@@ -10,6 +10,9 @@ Template.staff.helpers({
             showFilter: false,
             fields: [
                 {
+                    key: 'personnelNumber', label: '№'
+                },
+                {
                     key: 'staffFullName', label: 'Сотрудник', fn: function (value, object) {
                     return new Spacebars.SafeString(object.firstName + ' ' + object.lastName);
                 }
@@ -53,7 +56,7 @@ Template.staff.helpers({
                     label: '',
                     tmpl: Template.staffTableActions
                 }
-            ],
+            ]
         };
     },
     //base vars

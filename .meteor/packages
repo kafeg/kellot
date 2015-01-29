@@ -34,3 +34,4 @@ aldeed:autoform-bs-datetimepicker
 audit-argument-checks
 mrt:reactive-publish
 random
+dburles:collection-helpers

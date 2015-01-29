@@ -20735,6 +20735,7 @@ TableProcessor.prototype.drawHorizontalLine = function(lineIndex, writer, overri
 
       var y = (overrideY || 0) + offset;
 
+		//console.log(lineWidth,currentLine);
       if (!shouldDrawLine || i === l - 1) {
         if (currentLine) {
           writer.addVector({
