@@ -17810,6 +17810,7 @@ DocMeasure.prototype.measureTable = function(node) {
 		for(row = 0, rows = node.table.body.length; row < rows; row++) {
 			var rowData = node.table.body[row];
 			var data = rowData[col];
+			//console.log(col, rowData, data);
 			if (!data._span) {
 				var _this = this;
 				data = rowData[col] = this.styleStack.auto(data, measureCb(this, data));
