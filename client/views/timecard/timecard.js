@@ -2,7 +2,7 @@ var baseTemplateName = "timecard";
 var baseTemplateNameF = "Timecard";
 
 function getTdBgColor(objNum, object) {
-    return object['du'+objNum] ? '' : 'timecardNotEdited';
+    return object['du'+objNum] ? 'timecardEdited' : 'timecardNotEdited';
 }
 
 Template.timecard.helpers({
@@ -176,11 +176,14 @@ Template.timecard.helpers({
                     return new Spacebars.SafeString('<a href="#" class="timecardEditable '+getTdBgColor('31', object)+'" data-id="' + object._id + '" data-num="31" data-val="' + value + '" data-valtype="' + object.dt31 + '">' + value + '</a>');
                 }
                 },
-                {key: 'hospitalDays', label: 'Бол.'},
-                {key: 'workHoursAndMinuts', label: 'Раб. час:мин'},
-                {key: 'workHours', label: 'Раб. часы'},
-                {key: 'workHoursAndMinutsAtHolidays', label: 'Раб. час:мин, вых'},
-                {key: 'workHoursAtHolidays', label: 'Раб. часы, вых'},
+                {key: 'workDaysCount', label: 'Дни'},
+                {key: 'monthHours', label: 'Часы'},
+                {key: 'monthOvertimeHours', label: 'Сврх'},
+                //{key: 'hospitalDays', label: 'Бол.'},
+                //{key: 'workHoursAndMinuts', label: 'Раб. час:мин'},
+                //{key: 'workHours', label: 'Раб. часы'},
+                //{key: 'workHoursAndMinutsAtHolidays', label: 'Раб. час:мин, вых'},
+                //{key: 'workHoursAtHolidays', label: 'Раб. часы, вых'},
             ]
         };
     },
@@ -259,7 +262,7 @@ Template.timecard.created = function () {
 //}
 
 Template.timecard.rendered = function () {
-    $('.timecardNotEdited').parent().addClass('timecardNotEditedTd');
+    //$('.timecardNotEdited').parent().addClass('timecardNotEditedTd');
     //generate values for timecardSource DO NOT DELETE
     //for (var i = 7; i >= 0; i--) {
     //    for (var j = 59; j >= 0; j--) {
@@ -357,7 +360,7 @@ function registerNewEditableTypes() {
                 this.$timeList.empty();
                 this.$typeList.empty();
 
-                var fillItems = function ($el, data) {
+                var fillItems = function ($el, data, fillType) {
                     if ($.isArray(data)) {
                         for (var i = 0; i < data.length; i++) {
                             if (data[i].children) {
@@ -367,14 +370,14 @@ function registerNewEditableTypes() {
                             } else {
                                 $el.append($('<option>', {
                                     value: data[i].value
-                                }).text(data[i].text));
+                                }).text( fillType == 'type' ? data[i].codeNum + ' ' + data[i].code : data[i].text));
                             }
                         }
                     }
                     return $el;
                 };
-                fillItems(this.$timeList, this.sourceTimeData);
-                fillItems(this.$typeList, this.sourceTypeData);
+                fillItems(this.$timeList, this.sourceTimeData, 'time');
+                fillItems(this.$typeList, this.sourceTypeData, 'type');
             },
 
             value2html: function (value, element) {
@@ -460,11 +463,11 @@ function registerNewEditableTypes() {
         Timecard.defaults = $.extend({}, $.fn.editabletypes.abstractinput.defaults, {
             tpl: '<form id="updateStaffForm" novalidate="novalidate">\
              <div class="form-group">\
-             <label class="control-label">Время</label>\
+             <label class="control-label">Время</label><br/>\
              <select name="time" class="form-control" style="width: 100px;"></select></div>\
              <div class="form-group">\
-             <label class="control-label">Классификация записи</label>\
-             <select name="type" class="form-control" style="width: 100px;"></select></div></form>',
+             <label class="control-label">Код</label><br/>\
+             <select name="type" class="form-control" style="width: 100px;"></select></div><br/></form>',
             inputclass: '',
             showbuttons: 'bottom', //WHY ISN'T THIS WORKING!!!
             sourceType: [],
@@ -477,6 +480,15 @@ function registerNewEditableTypes() {
 }
 
 var timecardSource = [
+    //overtimes
+    { value:"12:00", text:"12:00"},
+    { value:"11:30", text:"11:30"},
+    { value:"11:00", text:"11:00"},
+    { value:"10:30", text:"10:30"},
+    { value:"10:00", text:"10:00"},
+    { value:"09:30", text:"09:30"},
+    { value:"09:00", text:"09:00"},
+    { value:"08:30", text:"08:30"},
     //quick hours
     { value:"08:00", text:"08:00"},
     { value:"07:30", text:"07:30"},
@@ -975,6 +987,15 @@ var timecardSource = [
     { value:"00:03", text:"00:03"},
     { value:"00:02", text:"00:02"},
     { value:"00:01", text:"00:01"},
+    //overtimes
+    { value:"12:00", text:"12:00"},
+    { value:"11:30", text:"11:30"},
+    { value:"11:00", text:"11:00"},
+    { value:"10:30", text:"10:30"},
+    { value:"10:00", text:"10:00"},
+    { value:"09:30", text:"09:30"},
+    { value:"09:00", text:"09:00"},
+    { value:"08:30", text:"08:30"},
     //quick hours two
     { value:"08:00", text:"08:00"},
     { value:"07:30", text:"07:30"},

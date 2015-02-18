@@ -83,3 +83,38 @@ th.departments {
 }
 
 .timecardNotEditedTd { background-color: gainsboro !important; }
+
+.timecardNotEdited {
+  /*font-weight: bold;*/
+  color: black;
+}
+
+.timecardEdited {
+  color: #29b6f6;
+  text-decoration: underline;
+}
+
+.rows-per-page > label > div, .page-number > label > div {
+  display: inline-block;
+}
+
+th.sortable {
+  text-align:center;
+}
+
+div.editable-buttons {
+  display: block;
+  text-align:center;
+}
+
+.editable-popup .popover-content {
+  padding: 0px 2px;
+}
+
+#updateStaffForm .form-group {
+  line-height: 1;
+}
+
+.editable-container.popover {
+  width: 211px;
+}

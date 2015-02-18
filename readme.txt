@@ -6,3 +6,9 @@
 Статичные файлы (картинки, шрифты и т.п.) - в директории /public
 
 npm -g xlsx
+
+Меняем цвет приложения:
+1) выбираем http://materializecss.com/color.html
+2) cd public/css
+3) правим custom.less
+4) lessc custom.less > material-custom.css
