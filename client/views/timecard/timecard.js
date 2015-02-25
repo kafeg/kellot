@@ -179,6 +179,7 @@ Template.timecard.helpers({
                 {key: 'workDaysCount', label: 'Дни'},
                 {key: 'monthHours', label: 'Часы'},
                 {key: 'monthOvertimeHours', label: 'Сврх'},
+                {key: 'monthNightHours', label: 'Ночь'},
                 //{key: 'hospitalDays', label: 'Бол.'},
                 //{key: 'workHoursAndMinuts', label: 'Раб. час:мин'},
                 //{key: 'workHours', label: 'Раб. часы'},

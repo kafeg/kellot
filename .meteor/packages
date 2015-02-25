@@ -16,7 +16,6 @@ accounts-google
 accounts-twitter
 mrt:accounts-vk
 mquandalle:bower
-mrt:accounts-ui-bootstrap-3
 aldeed:autoform
 aldeed:collection2
 ongoworks:security
@@ -35,3 +34,6 @@ audit-argument-checks
 mrt:reactive-publish
 random
 dburles:collection-helpers
+service-configuration
+mikepol:accounts-mailru
+ian:accounts-ui-bootstrap-3

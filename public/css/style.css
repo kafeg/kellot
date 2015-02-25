@@ -87,6 +87,9 @@ th.departments {
 .timecardNotEdited {
   /*font-weight: bold;*/
   color: black;
+  background-image: url(/img/bgs/N.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .timecardEdited {
