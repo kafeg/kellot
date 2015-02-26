@@ -1,13 +1,43 @@
 <template name="timecard">
     {{> helpMessage helpMessage='Табель учёта рабочего времени сотрудников Вашей компании. Это Ваш основной рабочий инструмент. Все сотрудники из справочника появляются здесь автоматически.'}}
     {{> pageTitle pageTitle=baseFormTitle}}
+
     <div class="btn-group top-right-pos-btns">
-        <a href="javascript:void(0)" class="btn btn-primary">Печать<div class="ripple-wrapper"></div></a>
-        <a href="javascript:void(0)" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-wrapper"></div></a>
-        <ul class="dropdown-menu">
-            <li><a href="#" id="generateExcelT12">Форма Т12</a></li>
-            <li><a href="#" id="generateExcelT13">Форма Т13</a></li>
-        </ul>
+        <div class="btn-toolbar bs-component" style="margin: 0;">
+            <div class="btn-group">
+                <a href="javascript:void(0)" id="currentYear" data-month="{{selectedMonth}}" class="btn btn-success">{{selectedMonthText}}<div class="ripple-wrapper"></div></a>
+                <a href="javascript:void(0)" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-wrapper"></div></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-num="0" class="monthFilter">Январь</a></li>
+                    <li><a href="#" data-num="1" class="monthFilter">Февраль</a></li>
+                    <li><a href="#" data-num="2" class="monthFilter">Март</a></li>
+                    <li><a href="#" data-num="3" class="monthFilter">Апрель</a></li>
+                    <li><a href="#" data-num="4" class="monthFilter">Май</a></li>
+                    <li><a href="#" data-num="5" class="monthFilter">Июнь</a></li>
+                    <li><a href="#" data-num="6" class="monthFilter">Июль</a></li>
+                    <li><a href="#" data-num="7" class="monthFilter">Август</a></li>
+                    <li><a href="#" data-num="8" class="monthFilter">Сентябрь</a></li>
+                    <li><a href="#" data-num="9" class="monthFilter">Октябрь</a></li>
+                    <li><a href="#" data-num="10" class="monthFilter">Ноябрь</a></li>
+                    <li><a href="#" data-num="11" class="monthFilter">Декабрь</a></li>
+                </ul>
+            </div>
+            <div class="btn-group" style="margin-left: 5px;">
+                <a href="javascript:void(0)" data-year="{{selectedYear}}" class="btn btn-success">{{selectedYear}}<div class="ripple-wrapper"></div></a>
+                <a href="javascript:void(0)" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-wrapper"></div></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-num="2015" class="yearFilter">2015</a></li>
+                </ul>
+            </div>
+            <div class="btn-group" style="margin-left: 5px;">
+                <a href="javascript:void(0)" class="btn btn-primary">Печать<div class="ripple-wrapper"></div></a>
+                <a href="javascript:void(0)" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-wrapper"></div></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-type="T12" class="generateExcel">Форма Т12</a></li>
+                    <li><a href="#" data-type="T13" class="generateExcel">Форма Т13</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     {{> reactiveTable settings=settings}}
     <style>

@@ -66,8 +66,10 @@ Meteor.publish('staff', function (userId) {
   return staffCollection;
 });
 
-Meteor.publish('timecard', function (userId) {
+Meteor.publish('timecard', function (userId, year, month) {
   check(userId, Match.Any);
+  check(year, Match.Any);
+  check(month, Match.Any);
 
   if (this.userId != null) {
     var company = Company.findOne({userId: this.userId}); //todo associated with company user!
@@ -75,7 +77,11 @@ Meteor.publish('timecard', function (userId) {
           var companyId = company._id;
           var staffs = Staff.find({companyId: companyId}, {fields: {_id: 1}}).fetch();
           var staffIds = staffs.map(function(doc) { return doc._id });
-          return Timecard.find({companyId: companyId, staffId: {$in: staffIds}});
+
+          var timecard = Timecard.find({companyId: companyId, staffId: {$in: staffIds}, year:year, month:month});
+          //console.log(userId, year, month, timecard.count());
+
+          return timecard;
     } else {
       return Timecard.find({companyId: '0'});
     }

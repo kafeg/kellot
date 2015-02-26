@@ -85,17 +85,16 @@ th.departments {
 .timecardNotEditedTd { background-color: gainsboro !important; }
 
 .timecardNotEdited {
-  /*font-weight: bold;*/
-  color: black;
-  background-image: url(/img/bgs/N.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
+   /*font-weight: bold;*/
+   color: black;
+ }
 
 .timecardEdited {
   color: #29b6f6;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
+
+.codeYA { background-image: url(/img/bgs/YA.png); background-repeat: no-repeat; background-position: bottom right; }
 
 .rows-per-page > label > div, .page-number > label > div {
   display: inline-block;
