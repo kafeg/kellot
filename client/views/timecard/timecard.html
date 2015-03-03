@@ -33,13 +33,14 @@
                 <a href="javascript:void(0)" class="btn btn-primary">Печать<div class="ripple-wrapper"></div></a>
                 <a href="javascript:void(0)" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><div class="ripple-wrapper"></div></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" data-type="T12" class="generateExcel">Форма Т12</a></li>
+                    <li><a href="#" data-type="T12" class="generateExcel">Форма Т12, первая часть</a></li>
+                    <li><a href="#" data-type="T12full" class="generateExcel">Форма Т12, полная</a></li>
                     <li><a href="#" data-type="T13" class="generateExcel">Форма Т13</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    {{> reactiveTable settings=settings}}
+        {{> reactiveTable settings=settings}}
     <style>
         .container {
             width:80%;

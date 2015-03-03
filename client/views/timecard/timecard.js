@@ -105,10 +105,21 @@ Template.timecard.helpers({
             case 11: case "11": text = 'Декабрь'; break;
         }
         return text;
+    },
+    timecardSubscriptionReady: function(){
+        // the handle has a special "ready" method, which is a reactive
+        // data source it indicates if the data provided by the publication
+        // has made its way to the client
+        return timecardSubscription.ready();
     }
 });
 
 Template.timecard.created = function () {
+    console.log('subs1', timecardSubscription);
+    if (timecardSubscription == undefined) {
+        timecardSubscription = Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
+        timecardSubscription.stopped = false;
+    }
 
     //$('#timcardTable').arrive(".timecardNotEdited", function() {
         // 'this' refers to the newly created element
@@ -118,7 +129,7 @@ Template.timecard.created = function () {
 
     registerNewEditableTypes();
     Tracker.autorun(function () {
-        console.log('staffUpdated');
+        //console.log('staffUpdated');
         //var d = new Date();
         //var currentYear = d.getFullYear();
         //var currentMonthId = d.getMonth();
@@ -168,12 +179,31 @@ Template.timecard.created = function () {
 //}
 
 Template.timecard.events({
-    'click .monthFilter': function(data){
-        timecardSubscription.stop();
+    'click .monthFilter': function(data) {
+        //console.log('subs stop', timecardSubscription);
+        if (timecardSubscription != undefined) {
+            timecardSubscription.stop();
+            timecardSubscription.stopped = true;
+        }
+
+        //console.log('stoped', timecardSubscription);
+        //timecardSubscription.stop();
         //console.log(data, data.currentTarget, $(data.currentTarget), $(data.currentTarget).attr('data-num') );
         Session.set("selectedMonth", parseInt($(data.currentTarget).attr('data-num')) );
         //Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
         //Session.set("selectedYear", currentDate.getFullYear());
+    },
+    'click .generateExcel': function(data) {
+        var reportType = $(data.currentTarget).attr('data-type');
+        if (reportType == 'T12') {
+            pdfmakeT12();
+        }
+        if (reportType == 'T12full') {
+            bootbox.alert("Печать полной формы отчёта Т12 пока недоступна, но мы работаем над ней!");
+        }
+        if (reportType == 'T13') {
+            bootbox.alert("Печать отчёта Т13 пока недоступна, но мы работаем над ней!");
+        }
     }
 });
 
@@ -197,7 +227,7 @@ Router.map(function () {
         path: '/' + baseTemplateName,
         waitOn: function () {
             Meteor.subscribe('company', Meteor.userId());
-            timecardSubscription = Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
+            //console.log('resubscribe');
             Meteor.subscribe('staff', Meteor.userId());
         }
     });
@@ -224,7 +254,12 @@ function timecardGenerator() {
         if (error) {
             bootbox.alert("Ошибка доступа к данным. Пожалуйста обратитесь в службу поддержки! Подробности: " + error.reason);
         } else {
-            timecardSubscription.start();
+            //console.log('subs2', timecardSubscription);
+            if ((timecardSubscription == undefined) || (timecardSubscription.stopped == true)) {
+                timecardSubscription = Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
+                timecardSubscription.stopped = false;
+            }
+            //timecardSubscription.start();
             //Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
         }
     });
