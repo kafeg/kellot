@@ -3,8 +3,8 @@
   "servers": [
     {
       "host": "forsk.ru",
-      "username": "ubuntu",
-      "password": "Ujhjltw123"
+      "username": "admin",
+      "password": "fzQ5hPyMjd"
       // or pem file (ssh based authentication)
       //"pem": "~/.ssh/id_rsa"
     }
