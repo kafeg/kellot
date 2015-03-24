@@ -94,6 +94,16 @@ th.departments {
   /*text-decoration: underline;*/
 }
 
+.timecardEditedH1 {
+  color: #FD6D78;
+  /*text-decoration: underline;*/
+}
+
+.timecardEditedH2 {
+  color: #FD6D78;
+  /*text-decoration: underline;*/
+}
+
 .codeYA { background-image: url(/img/bgs/YA.png); background-repeat: no-repeat; background-position: bottom right; }
 
 .rows-per-page > label > div, .page-number > label > div {
@@ -119,4 +129,8 @@ div.editable-buttons {
 
 .editable-container.popover {
   width: 211px;
+}
+
+td.actions {
+  min-width: 50px;
 }

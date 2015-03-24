@@ -38,3 +38,4 @@ service-configuration
 mikepol:accounts-mailru
 ian:accounts-ui-bootstrap-3
 meteorhacks:kadira
+momentjs:moment
