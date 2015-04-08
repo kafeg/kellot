@@ -1,3 +1,8 @@
+Meteor.publish("userData", function () {
+  return Meteor.users.find({_id: this.userId},
+      {fields: {'other': 1, 'things': 1, 'services':1}});
+});
+
 Meteor.publish('company', function (userId) {
   check(userId, Match.Any);
 

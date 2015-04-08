@@ -10,6 +10,8 @@
         <p>{{description}}</p>
         {{> updateFormButton formName="updateCompanyForm"}}
     {{/with}}
+
+    {{> linkTemplate}}
 </template>
 
 <template name="companyFieldset">
@@ -41,4 +43,22 @@
         {{> submitUpdateFormButtons}}
         {{> backFormButton formName="company"}}
     {{/autoForm}}
+</template>
+
+<template name="linkTemplate">
+    <h2>2.  Link Facebook account</h2>
+
+    <button class="link-facebook">Link Facebook Account</button>
+
+    <h2>3.  Link VK account</h2>
+
+    <button class="link-vk">Link VK Account</button>
+
+    <h2>4.  List out services that are associated with current user.</h2>
+
+    <ul>
+        {{#each services}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
 </template>
