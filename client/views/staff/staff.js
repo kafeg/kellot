@@ -102,7 +102,7 @@ Router.map(function () {
         //waitOn: function() { return Meteor.subscribe('staff', Meteor.userId()); }
     });
     this.route('add' + baseTemplateNameF + 'Form', {
-        path: '/' + baseTemplateName + '/add',
+        path: '/' + baseTemplateName + '/add'
         //waitOn: function() { return Meteor.subscribe('department', Meteor.userId()); }
     });
     this.route('update' + baseTemplateNameF + 'Form', {
@@ -118,6 +118,7 @@ AutoForm.hooks({
     addStaffForm: {
         onSuccess: function (operation, result, template) {
             Router.go(baseTemplateName);
+            Meteor.subscribe('company', Meteor.userId());
         }
     },
     updateStaffForm: {

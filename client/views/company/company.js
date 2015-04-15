@@ -8,12 +8,12 @@ AutoForm.hooks({
         onSuccess: function (operation, result, template) {
             Meteor.subscribe('company', Meteor.userId());
             Router.go('company');
-        },
+        }
     },
     updateCompanyForm: {
         onSuccess: function (operation, result, template) {
             Router.go('company');
-        },
+        }
     }
 });
 
