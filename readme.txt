@@ -58,3 +58,12 @@ server {
 }
 
 setup dns record p.kellot.ru
+
+vagrant: 
+1) Install vagrant 
+2) git clone git@bitbucket.org:kafeg/kellot.git
+3) vagrant up 
+4) cd /home/vagrant/ && meteor create kellot 
+5) echo 'sudo mount --bind /home/vagrant/kellot/.meteor/ /vagrant/.meteor/' >> /home/vagrant/.bashrc
+6) vagrant reload
+7) Add Start-Vagrant to autostart via regedit
