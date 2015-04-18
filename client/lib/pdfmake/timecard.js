@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-
+console.log('cheparka');
     pdfmakeT12 = function() {
         //console.log('make t12');
 
