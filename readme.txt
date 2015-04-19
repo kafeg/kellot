@@ -1,26 +1,33 @@
-Код в директории ‘/server’ исполняется только на сервере
-Код в директории ‘/client’ исполняется только на клиенте
-Все остальные файлы исполняются и на клиенте, и на сервере
-Файлы в директории ‘/lib’ загружаются самыми первыми
-Все файлы с именем ‘main.*’ загружаются самыми последними
-Статичные файлы (картинки, шрифты и т.п.) - в директории /public
+=== Meteor ===
 
-npm -g xlsx
+Каталоги:
+- Код в директории ‘/server’ исполняется только на сервере
+- Код в директории ‘/client’ исполняется только на клиенте
+- Все остальные файлы исполняются и на клиенте, и на сервере
+- Файлы в директории ‘/lib’ загружаются самыми первыми
+- Все файлы с именем ‘main.*’ загружаются самыми последними
+- Статичные файлы (картинки, шрифты и т.п.) - в директории /public
 
-====
+=== Material Design ===
+Обновление:
+1) Вручную качаем архив с https://github.com/FezVrasta/bootstrap-material-design
+2) Копируем всё из папки dist к нам в проект в public
+
+Не используем бовер и пакет метеора потому что они слишком глючат. Обновлено 20.04.15
+
 Меняем цвет приложения:
 1) выбираем http://materializecss.com/color.html
 2) cd public/css
 3) правим custom.less
 4) lessc custom.less > material-custom.css
 
-====
-Установка и деплой через mup
-https://github.com/arunoda/meteor-up#installation
+=== Настройка сервера ===
 
-sudo adduser admin  sudo
+Установка и деплой через mup: https://github.com/arunoda/meteor-up#installation
 
-sudo nano /etc/sudoers.d/admin
+Сервер:
+1) sudo adduser admin  sudo
+2) sudo nano /etc/sudoers.d/admin
 
 # replace this line
 admin   ALL=(ALL)       ALL
@@ -28,11 +35,10 @@ admin   ALL=(ALL)       ALL
 # by this line
 admin   ALL=(ALL)      NOPASSWD:ALL
 
-sudo service sudo restart
+3) sudo service sudo restart
+4) У себя на клиенте: mup setup mup deploy
 
-mup setup mup deploy
-
-setup nginx:
+nginx на сервере:
 
 server {
     listen      128.199.60.8:80;
@@ -57,14 +63,14 @@ server {
     include /home/admin/conf/web/nginx.p.kellot.ru.conf*;
 }
 
-setup dns record p.kellot.ru
+Локально настраиваем ДНС запись p.kellot.ru, иначе сервисы авторизации будут ругаться.
 
 vagrant: 
 1) Install vagrant 
 2) git clone git@bitbucket.org:kafeg/kellot.git
 3) vagrant up 
 4) cd /home/vagrant/ && meteor create kellot 
-5) echo 'sudo mount --bind /home/vagrant/kellot/.meteor/local /vagrant/.meteor/local' >> /home/vagrant/.bashrc
+5) echo 'sudo mount --bind /home/vagrant/kellot/.meteor/local/db /vagrant/.meteor/local/db' >> /home/vagrant/.bashrc
 6) sudo chmod 777 -R /vagrant/
 7) vagrant reload
 8) Add Start-Vagrant to autostart via regedit

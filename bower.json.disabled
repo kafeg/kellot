@@ -2,7 +2,9 @@
   "name": "kellot",
   "version": "0.0.1",
   "dependencies": {
-    "bootstrap-material-design": "~0.2.1"
+    "bootstrap": "~3.3.4",
+    "bootstrap-material-design": "~0.3.0",
+    "x-editable": "~1.5.1"
   },
   "private": true,
   "authors": [

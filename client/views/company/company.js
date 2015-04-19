@@ -6,8 +6,15 @@ Tracker.autorun(function () {
 AutoForm.hooks({
     registerNewCompanyForm: {
         onSuccess: function (operation, result, template) {
+            console.log('registerNewCompanyForm success');
             Meteor.subscribe('company', Meteor.userId());
             Router.go('company');
+            Department.insert({title:'Администрация'});
+            Department.insert({title:'Бухгалтерия'});
+            Router.go('department');
+            //Holiday.insert({title:'Администрация'});
+            //Holiday.insert({title:'Бухгалтерия'});
+            //Router.go('department');
         }
     },
     updateCompanyForm: {
@@ -25,8 +32,8 @@ if (Meteor.isClient) {
         }
     });
     Template.firstLoginForm.events({
-        'click #buttonInviteToCompany': function () {
-            Router.go("registerNewCompanyForm");
+        'click #buttonRequestInviteToCompany': function () {
+            Router.go("requestInviteToCompany");
         }
     });
 
