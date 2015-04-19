@@ -18,6 +18,18 @@ AutoForm.hooks({
 });
 
 if (Meteor.isClient) {
+
+    Template.firstLoginForm.events({
+        'click #buttonCreateCompany': function () {
+            Router.go("registerNewCompanyForm");
+        }
+    });
+    Template.firstLoginForm.events({
+        'click #buttonInviteToCompany': function () {
+            Router.go("registerNewCompanyForm");
+        }
+    });
+
     Template.linkTemplate.events({
         'click .link-facebook': function () {
             Meteor.linkWithFacebook();
@@ -28,6 +40,8 @@ if (Meteor.isClient) {
             Meteor.linkWithVk();
         }
     });
+
+
 
     Template.linkTemplate.helpers({
         services: function () {

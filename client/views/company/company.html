@@ -21,6 +21,21 @@
     </fieldset>
 </template>
 
+<template name="firstLoginForm">
+    Добро пожаловать!
+
+    Похоже, Вы только что зарегистрировались?
+
+    Прежде чем Вы сможете перейти к основным функциям,
+    Вам необходимо присоединиться к одной из существующих компаний или зарегистрировать новую.
+
+    <p class="text-center center-block" style="width: 500px;">
+        <button class="btn btn-primary btn-block" id="buttonCreateCompany">Зарегистрировать новую компанию</button>
+        <button class="btn btn-primary btn-block" id="buttonInviteToCompany">Присоединиться к существующей компании</button>
+    </p>
+
+</template>
+
 <template name="registerNewCompanyForm">
     {{#autoForm collection="Company" id="registerNewCompanyForm" type="insert"}}
         {{> helpMessage helpMessage='Привет! Судя по всему Вы только что зарегистрировались. Для начала, Вам необходимо ввести самые основные сведения о своей компании! После заполнения данной информации, Вам станут доступны другие пункты меню.'}}

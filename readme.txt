@@ -64,6 +64,7 @@ vagrant:
 2) git clone git@bitbucket.org:kafeg/kellot.git
 3) vagrant up 
 4) cd /home/vagrant/ && meteor create kellot 
-5) echo 'sudo mount --bind /home/vagrant/kellot/.meteor/ /vagrant/.meteor/' >> /home/vagrant/.bashrc
-6) vagrant reload
-7) Add Start-Vagrant to autostart via regedit
+5) echo 'sudo mount --bind /home/vagrant/kellot/.meteor/local /vagrant/.meteor/local' >> /home/vagrant/.bashrc
+6) sudo chmod 777 -R /vagrant/
+7) vagrant reload
+8) Add Start-Vagrant to autostart via regedit
