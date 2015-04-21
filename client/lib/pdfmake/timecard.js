@@ -114,7 +114,7 @@ console.log('cheparka');
                 fSS(row.dt23),fSS(row.dt24),fSS(row.dt25),fSS(row.dt26),fSS(row.dt27),fSS(row.dt28),fSS(row.dt29),
                 fSS(row.dt30),fSS(row.dt31), getUdefined(row.monthHalf2count, '0'),{ text: getUdefined(row.workDaysCount, '0'), rowSpan: 2 },{ text: getUdefined(row.monthHours, '00:00'), rowSpan: 2 },
                 { text: getUdefined(row.monthOvertimeHours, '00:00'), rowSpan: 2 },{ text: getUdefined(row.monthNightHours, '00:00'), rowSpan: 2 },{ text: getUdefined(row.monthHolidaysHours, '00:00'), rowSpan: 2 },
-                '','','',{ text: ' ', rowSpan: 2 }
+                getUdefined(row.absenceDaysCount, '0'),'-','-',{ text: getUdefined(row.relaxDaysCount, '0'), rowSpan: 2 }
             ];
 
             var row2 = [
@@ -122,7 +122,7 @@ console.log('cheparka');
                 row.d9,row.d10,row.d11,row.d12,row.d13,row.d14,row.d15,getUdefined(row.monthHalf1, '00:00'),
                 row.d16,row.d17,row.d18,row.d19,row.d20,row.d21,row.d22,
                 row.d23,row.d24,row.d25,row.d26,row.d27,row.d28,row.d29,
-                row.d30,row.d31,getUdefined(row.monthHalf2, '00:00'),' ',' ','','','','','','',''
+                row.d30,row.d31,getUdefined(row.monthHalf2, '00:00'),' ','','','','',getUdefined(row.absenceHours, '00:00'),'-','-',''
             ];
 
             timecardTableBody.push(row1);

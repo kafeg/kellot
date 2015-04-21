@@ -1,5 +1,65 @@
 <template name="profile">
-    Привет, юзернейм! Это твой профиль!
 
-    Здесь ты можешь просмотреть статистику своего аккаунта, краткую информацию о твоей компании и привзяать к своему аккаунту другие учётные записи. Круто?
+    <h2><div class="icon-preview"><i class="mdi-social-people-outline"></i></div>Профиль пользователя {{currentUser.profile.name}}</h2>
+
+    {{> profileInfo}}
+</template>
+
+<template name="profileInfo">
+
+    <div id="profile" style="height:350px">
+
+        {{> linkTemplate}}
+
+        <div class="panel panel-info" style="float: left; width: 72.5%;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Инфомрация о Вашем профиле</h3>
+            </div>
+            <div class="panel-body">
+                Постепенно информации здесь будет становиться больше =)<br/>
+
+                Ну а пока, предлагаем Вам связать текущий аккаунт с другими своими учётными записями из социальных сетей!
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="linkTemplate">
+    <div class="panel panel-success" style="float: left; margin-right: 20px;">
+        <div class="panel-heading">
+            <h3 class="panel-title">Подключите все свои аккаунты!</h3>
+        </div>
+        <div class="panel-body">
+            {{#if isLinkedGoogle}}
+                <button  class="btn" style="width: 250px;">Связано с Google</button><br/>
+            {{else}}
+                <button id="linkWithGoogle" class="btn btn-primary" style="width: 250px;">Связать с Google</button><br/>
+            {{/if}}
+
+            {{#if isLinkedVk}}
+                <button  class="btn" style="width: 250px;">Связано с ВКонтакте</button><br/>
+            {{else}}
+                <button id="linkWithVk" class="btn btn-primary" style="width: 250px;">Связать с ВКонтакте</button><br/>
+            {{/if}}
+
+            {{#if isLinkedFacebook}}
+                <button class="btn" style="width: 250px;">Связано с Facebook</button><br/>
+            {{else}}
+                <button id="linkWithFacebook" class="btn btn-primary" style="width: 250px;">Связать с Facebook</button><br/>
+            {{/if}}
+
+            {{#if isLinkedMailru}}
+                <button class="btn" style="width: 250px;">Связано с Mail.Ru</button><br/>
+            {{else}}
+                <button id="linkWithMailru" class="btn btn-primary" style="width: 250px;">Связать с Mail.Ru</button><br/>
+            {{/if}}
+
+            {{#if isLinkedTwitter}}
+                <button class="btn" style="width: 250px;">Связано с Twitter</button><br/>
+            {{else}}
+                <button id="linkWithTwitter" class="btn btn-primary" style="width: 250px;">Связать с Twitter</button><br/>
+            {{/if}}
+        </div>
+    </div>
 </template>

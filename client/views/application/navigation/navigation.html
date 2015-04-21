@@ -26,6 +26,7 @@
     {{#if currentUser}}
         <li class="{{ activeIfTemplateIs 'Timecard' }}"><a href="{{pathFor 'timecard'}}">Табель</a></li>
         <li class="{{ activeIfTemplateIs 'Staff' }}"><a href="{{pathFor 'staff'}}">Сотрудники</a></li>
+
         <li class="dropdown {{ activeIfTemplateIs 'Department|Holiday' }}">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Справочники <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -37,7 +38,9 @@
         <li class="{{ activeIfTemplateIs 'Company|RegisterNewCompanyForm|UpdateCompanyForm' }}"><a
                 href="{{pathFor 'company'}}">Моя компания</a></li>
         <!-- <li class="{{ activeIfTemplateIs 'UserProfile' }}"><a href="{{pathFor 'userProfile'}}">Личный кабинет</a></li> -->
+        <li class="{{ activeIfTemplateIs 'Reviews' }}"><a href="{{pathFor 'reviews'}}">Отзывы</a></li>
     {{else}}
+        <li class="{{ activeIfTemplateIs 'Reviews' }}"><a href="{{pathFor 'reviews'}}">Отзывы</a></li>
         <!-- <li class="{{ activeIfTemplateIs 'LoginForm' }}"><a href="{{pathFor 'loginForm'}}">Вход</a></li> -->
     {{/if}}
 </template>

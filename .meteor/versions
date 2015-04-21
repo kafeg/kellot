@@ -72,6 +72,7 @@ mongo-livedata@1.0.8
 mquandalle:bower@1.3.12_3
 mrt:accounts-vk@0.2.0
 mrt:bootstrap-alerts@0.0.5
+mrt:external-file-loader@0.1.4
 mrt:reactive-publish@0.1.6
 mrt:server-deps@0.1.2
 natestrauser:connection-banner@0.4.3

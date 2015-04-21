@@ -1,16 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3bdb265-cacf-487b-8eaa-18068965645d" name="Default" comment="">
-      <change type="DELETED" beforePath="K:\kellot\bower.json" afterPath="" />
+    <list default="true" id="7ea26877-b210-4701-a95e-5ae61d62d72f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/includes/clientHelpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/profile/profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/reviews/reviews.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/.nodelete" afterPath="$PROJECT_DIR$/client/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/.nodelete" afterPath="$PROJECT_DIR$/client/stylesheets/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/.nodelete" afterPath="$PROJECT_DIR$/client/views/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/.nodelete" afterPath="$PROJECT_DIR$/lib/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/.nodelete" afterPath="$PROJECT_DIR$/lib/collections/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.nodelete" afterPath="$PROJECT_DIR$/public/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/.nodelete" afterPath="$PROJECT_DIR$/server/.nodelete" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/C.png" afterPath="$PROJECT_DIR$/public/img/bgs/C.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.eot" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.eot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.ttf" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.ttf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.woff" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/N.png" afterPath="$PROJECT_DIR$/public/img/bgs/N.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/RP.png" afterPath="$PROJECT_DIR$/public/img/bgs/RP.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/YA.png" afterPath="$PROJECT_DIR$/public/img/bgs/YA.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-144x144.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-144x144.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-192x192.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-192x192.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-36x36.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-36x36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-48x48.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-48x48.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-72x72.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-72x72.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-96x96.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-96x96.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-114x114.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-114x114.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-120x120.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-120x120.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-144x144.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-144x144.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-152x152.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-152x152.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-180x180.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-180x180.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-57x57.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-57x57.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-60x60.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-60x60.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-72x72.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-72x72.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-76x76.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-76x76.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-precomposed.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-precomposed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/clear.png" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/clear.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon-16x16.png" afterPath="$PROJECT_DIR$/public/favicons/favicon-16x16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon-32x32.png" afterPath="$PROJECT_DIR$/public/favicons/favicon-32x32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon-96x96.png" afterPath="$PROJECT_DIR$/public/favicons/favicon-96x96.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon.ico" afterPath="$PROJECT_DIR$/public/favicons/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot.png" afterPath="$PROJECT_DIR$/public/img/kellot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot.xcf" afterPath="$PROJECT_DIR$/public/img/kellot.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot_logo.png" afterPath="$PROJECT_DIR$/public/img/kellot_logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot_logo_transparent.png" afterPath="$PROJECT_DIR$/public/img/kellot_logo_transparent.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot_vectorized.png" afterPath="$PROJECT_DIR$/public/img/kellot_vectorized.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/loading.gif" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-144x144.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-144x144.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-150x150.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-150x150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-310x310.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-310x310.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-70x70.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-70x70.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/ptr-cloth-light.jpg" afterPath="$PROJECT_DIR$/public/img/ptr-cloth-light.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/subtle_textured_light_background.jpg" afterPath="$PROJECT_DIR$/public/img/subtle_textured_light_background.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/.finished-upgraders" afterPath="$PROJECT_DIR$/.meteor/.finished-upgraders" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/.gitignore" afterPath="$PROJECT_DIR$/.meteor/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/.id" afterPath="$PROJECT_DIR$/.meteor/.id" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/public/fonts/LICENSE.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.svg" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/actions.html" afterPath="$PROJECT_DIR$/client/views/application/includes/actions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/actions.js" afterPath="$PROJECT_DIR$/client/views/application/includes/actions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/arrive.js" afterPath="$PROJECT_DIR$/public/js/arrive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/autoform.global.js" afterPath="$PROJECT_DIR$/client/views/application/includes/autoform.global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/css/bootstrap-editable.css" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/css/bootstrap-editable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/js/bootstrap-editable.js" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/js/bootstrap-editable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/browserconfig.xml" afterPath="$PROJECT_DIR$/public/favicons/browserconfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/company/company.html" afterPath="$PROJECT_DIR$/client/views/company/company.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/company/company.js" afterPath="$PROJECT_DIR$/client/views/company/company.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/company.js" afterPath="$PROJECT_DIR$/lib/collections/company.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.less" afterPath="$PROJECT_DIR$/public/css/custom.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/department/department.html" afterPath="$PROJECT_DIR$/client/views/department/department.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/department/department.js" afterPath="$PROJECT_DIR$/client/views/department/department.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/department.js" afterPath="$PROJECT_DIR$/lib/collections/department.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/fixtures.js" afterPath="$PROJECT_DIR$/server/fixtures.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/helpAlerts.js" afterPath="$PROJECT_DIR$/client/views/application/includes/helpAlerts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helpers.js" afterPath="$PROJECT_DIR$/lib/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/holiday/holiday.html" afterPath="$PROJECT_DIR$/client/views/holiday/holiday.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/holiday/holiday.js" afterPath="$PROJECT_DIR$/client/views/holiday/holiday.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/holiday.js" afterPath="$PROJECT_DIR$/lib/collections/holiday.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/index.html" afterPath="$PROJECT_DIR$/client/views/application/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/kadira.js" afterPath="$PROJECT_DIR$/server/kadira.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot.svg" afterPath="$PROJECT_DIR$/public/img/kellot.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/layout.html" afterPath="$PROJECT_DIR$/client/views/application/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/loading.html" afterPath="$PROJECT_DIR$/client/views/application/includes/loading.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.js" afterPath="$PROJECT_DIR$/client/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/manifest.json" afterPath="$PROJECT_DIR$/public/favicons/manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.css.map" afterPath="$PROJECT_DIR$/public/css/material-wfont.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.css" afterPath="$PROJECT_DIR$/public/css/material-wfont.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.min.css.map" afterPath="$PROJECT_DIR$/public/css/material-wfont.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.min.css" afterPath="$PROJECT_DIR$/public/css/material-wfont.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.css.map" afterPath="$PROJECT_DIR$/public/css/material.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.css" afterPath="$PROJECT_DIR$/public/css/material.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/material.js" afterPath="$PROJECT_DIR$/public/js/material.js" />
@@ -18,15 +101,44 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.min.css" afterPath="$PROJECT_DIR$/public/css/material.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/material.min.js.map" afterPath="$PROJECT_DIR$/public/js/material.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/material.min.js" afterPath="$PROJECT_DIR$/public/js/material.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mup/mup.json" afterPath="$PROJECT_DIR$/mup/mup.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/navigation/navigation.html" afterPath="$PROJECT_DIR$/client/views/application/navigation/navigation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/navigation/navigation.js" afterPath="$PROJECT_DIR$/client/views/application/navigation/navigation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pdfmake.js" afterPath="$PROJECT_DIR$/public/js/pdfmake.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/platforms" afterPath="$PROJECT_DIR$/.meteor/platforms" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/profile/profile.html" afterPath="$PROJECT_DIR$/client/views/application/profile/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/prototypes.js" afterPath="$PROJECT_DIR$/lib/prototypes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/publications.js" afterPath="$PROJECT_DIR$/server/publications.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/receiver.html" afterPath="$PROJECT_DIR$/public/receiver.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/replacements.html" afterPath="$PROJECT_DIR$/client/views/application/includes/replacements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/replacements.js" afterPath="$PROJECT_DIR$/client/views/application/includes/replacements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.css.map" afterPath="$PROJECT_DIR$/public/css/ripples.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.css" afterPath="$PROJECT_DIR$/public/css/ripples.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ripples.js" afterPath="$PROJECT_DIR$/public/js/ripples.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.min.css.map" afterPath="$PROJECT_DIR$/public/css/ripples.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.min.css" afterPath="$PROJECT_DIR$/public/css/ripples.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ripples.min.js.map" afterPath="$PROJECT_DIR$/public/js/ripples.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ripples.min.js" afterPath="$PROJECT_DIR$/public/js/ripples.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="$PROJECT_DIR$/lib/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/security.js" afterPath="$PROJECT_DIR$/server/security.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.json" afterPath="$PROJECT_DIR$/settings.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mup/settings.json" afterPath="$PROJECT_DIR$/mup/settings.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staff.html" afterPath="$PROJECT_DIR$/client/views/staff/staff.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staff.js" afterPath="$PROJECT_DIR$/client/views/staff/staff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/staff.js" afterPath="$PROJECT_DIR$/lib/collections/staff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/lib/subscriptions.js" afterPath="$PROJECT_DIR$/client/views/application/lib/subscriptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/timecard.css" afterPath="$PROJECT_DIR$/public/css/timecard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timecard.forsk.ru.conf" afterPath="$PROJECT_DIR$/timecard.forsk.ru.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/timecard/timecard.html" afterPath="$PROJECT_DIR$/client/views/timecard/timecard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/lib/pdfmake/timecard.js" afterPath="$PROJECT_DIR$/client/lib/pdfmake/timecard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/timecard/timecard.js" afterPath="$PROJECT_DIR$/client/views/timecard/timecard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/timecard.js" afterPath="$PROJECT_DIR$/lib/collections/timecard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vfs_fonts.js" afterPath="$PROJECT_DIR$/public/js/vfs_fonts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kellot.iws" />
@@ -51,51 +163,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1462">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="company.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/company/company.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state vertical-scroll-proportion="-17.178572" vertical-offset="590" max-vertical-offset="1207">
+              <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timecard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/timecard/timecard.html">
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/application/profile/profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1394">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="1632">
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="90" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/main.html">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/views/application/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23407917" vertical-offset="102" max-vertical-offset="799">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.35740742" vertical-offset="164" max-vertical-offset="1190">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#3;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#4;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#5;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#6;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#7;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#8;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#9;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.txt">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1394">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1513">
+              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -104,51 +222,29 @@
       <file leaf-file-name="navigation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/application/navigation/navigation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="884">
-              <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+            <state vertical-scroll-proportion="-15.807693" vertical-offset="303" max-vertical-offset="935">
+              <caret line="42" column="102" selection-start-line="42" selection-start-column="102" selection-end-line="42" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/main.js">
+      <file leaf-file-name="actions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/application/includes/actions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="204" max-vertical-offset="799">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="department.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/department/department.js">
+      <file leaf-file-name="timecard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/timecard/timecard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1190">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state vertical-scroll-proportion="3.6538463" vertical-offset="826" max-vertical-offset="1394">
+              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="department.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/collections/department.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-              <caret line="0" column="45" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="company.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/company/company.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="408" max-vertical-offset="1496">
-              <caret line="42" column="38" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#template#4;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -218,20 +314,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -246,24 +328,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collections" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -283,50 +347,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kellot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="department" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -396,7 +416,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="reviews" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="navigation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,13 +505,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.meteor.library.was.enabled" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="K:\kellot\client" />
-    </key>
+    <property name="js.meteor.library.was.enabled" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -453,10 +546,10 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f3bdb265-cacf-487b-8eaa-18068965645d" name="Default" comment="" />
-      <created>1429461887982</created>
+      <changelist id="7ea26877-b210-4701-a95e-5ae61d62d72f" name="Default" comment="" />
+      <created>1429545418969</created>
       <option name="number" value="Default" />
-      <updated>1429461887982</updated>
+      <updated>1429545418969</updated>
     </task>
     <servers />
   </component>
@@ -505,84 +598,151 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/router.js">
+    <entry file="file://$PROJECT_DIR$/lib/collections/holiday.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1462">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/company/company.html">
+    <entry file="file://$PROJECT_DIR$/client/views/holiday/holiday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="408" max-vertical-offset="1496">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#template#4;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-9.37037" vertical-offset="21" max-vertical-offset="714">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/department/department.js">
+    <entry file="file://$PROJECT_DIR$/server/publications.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1190">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1734">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/holiday/holiday.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5595855" vertical-offset="1002" max-vertical-offset="1581">
+          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/collections/department.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="0" column="45" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1003">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.min.js">
+    <entry file="file://$PROJECT_DIR$/lib/collections/company.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030035336" vertical-offset="0" max-vertical-offset="566">
-          <caret line="5" column="12958" selection-start-line="5" selection-start-column="12953" selection-end-line="5" selection-end-column="12958" />
+        <state vertical-scroll-proportion="1.3443164" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/company/company.js">
+    <entry file="file://$PROJECT_DIR$/client/views/timecard/timecard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        <state vertical-scroll-proportion="1.2861953" vertical-offset="3911" max-vertical-offset="16694">
+          <caret line="275" column="37" selection-start-line="275" selection-start-column="37" selection-end-line="275" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/fixtures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="731">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collections/timecard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1785715" vertical-offset="9023" max-vertical-offset="13379">
+          <caret line="536" column="18" selection-start-line="536" selection-start-column="4" selection-end-line="536" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/pdfmake/timecard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6325088" vertical-offset="1750" max-vertical-offset="7854">
+          <caret line="124" column="134" selection-start-line="124" selection-start-column="134" selection-end-line="124" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collections/staff.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47611204" vertical-offset="357" max-vertical-offset="1887">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/material-wfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.638047" vertical-offset="3621" max-vertical-offset="591192">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/timecard/timecard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1394">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        <state vertical-scroll-proportion="3.6538463" vertical-offset="826" max-vertical-offset="1394">
+          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/material.css.map">
+    <entry file="file://$PROJECT_DIR$/client/views/company/company.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="12" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/material-custom.css">
+    <entry file="file://$PROJECT_DIR$/lib/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8619528" vertical-offset="1785" max-vertical-offset="573784">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1513">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.js">
+    <entry file="file://$PROJECT_DIR$/client/views/application/navigation/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.807693" vertical-offset="303" max-vertical-offset="935">
+          <caret line="42" column="102" selection-start-line="42" selection-start-column="102" selection-end-line="42" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/application/includes/actions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="204" max-vertical-offset="799">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16803955" vertical-offset="0" max-vertical-offset="607">
+          <caret line="6" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/application/includes/clientHelpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -590,27 +750,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/application/navigation/navigation.html">
+    <entry file="file://$PROJECT_DIR$/client/views/company/company.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+        <state vertical-scroll-proportion="-17.178572" vertical-offset="590" max-vertical-offset="1207">
+          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
+    <entry file="file://$PROJECT_DIR$/client/views/application/reviews/reviews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1394">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.14964789" vertical-offset="0" max-vertical-offset="568">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23407917" vertical-offset="102" max-vertical-offset="799">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="799">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/application/profile/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="1632">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="90" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/application/profile/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35740742" vertical-offset="164" max-vertical-offset="1190">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#3;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#7;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#8;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#9;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
