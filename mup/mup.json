@@ -4,7 +4,8 @@
     {
       "host": "forsk.ru",
       "username": "admin",
-      "password": "fzQ5hPyMjd"
+      "password": "fzQ5hPyMjd",
+      "sshOptions": { "Port" : 7722 }
       // or pem file (ssh based authentication)
       //"pem": "~/.ssh/id_rsa"
     }
