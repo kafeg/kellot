@@ -57,7 +57,7 @@ Router.map(function () {
         path: '/' + baseTemplateName,
         waitOn: function () {
             return Meteor.subscribe('company', Meteor.userId());
-        },
+        }
         //waitOn: function() { return Meteor.subscribe('holiday', Meteor.userId()); }
     });
     this.route('add' + baseTemplateNameF + 'Form', {

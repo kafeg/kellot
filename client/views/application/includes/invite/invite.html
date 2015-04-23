@@ -1,0 +1,26 @@
+<template name="inviteList">
+    <div class="panel panel-success" style="float: left; margin-right: 20px;">
+        <div class="panel-heading">
+            <h3 class="panel-title">Пригласите больше редакторов!</h3>
+        </div>
+        <div class="panel-body">
+            Ща...
+        </div>
+        <div class="panel-footer">
+            {{> inviteSend}}
+        </div>
+    </div>
+</template>
+
+<template name="inviteSend">
+    {{#autoForm collection="Invite" id="inviteSend" type="insert"}}
+        {{> inviteFieldset}}
+        <button id="sendInviteBtn" class="btn btn-primary" style="width:100%">Пригласить</button>
+    {{/autoForm}}
+</template>
+
+<template name="inviteFieldset">
+    <fieldset>
+        {{> afQuickField name='email'}}
+    </fieldset>
+</template>

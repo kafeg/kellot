@@ -94,3 +94,19 @@ Meteor.publish('timecard', function (userId, year, month) {
     return Timecard.find({companyId: '0'});
   }
 });
+
+Meteor.publish('invite', function (userId) {
+  check(userId, Match.Any);
+
+  if (this.userId != null) {
+    var company = Company.findOne({userId: this.userId});
+    if (company != undefined) {
+      var companyId = company._id;
+      return Invite.find({companyId: Company.findOne({userId: userId})._id});
+    } else {
+      return Invite.find({companyId: '0'});
+    }
+  } else {
+    return Invite.find({companyId: '0'});
+  }
+});

@@ -5,24 +5,16 @@
 Template.linkTemplate.events({
     'click #linkWithFacebook': function () {
         Meteor.linkWithFacebook();
-    }
-});
-Template.linkTemplate.events({
+    },
     'click #linkWithGoogle': function () {
         Meteor.linkWithGoogle();
-    }
-});
-Template.linkTemplate.events({
+    },
     'click #linkWithMailru': function () {
         Meteor.linkWithMailru();
-    }
-});
-Template.linkTemplate.events({
+    },
     'click #linkWithTwitter': function () {
         Meteor.linkWithTwitter();
-    }
-});
-Template.linkTemplate.events({
+    },
     'click #linkWithVk': function () {
         Meteor.linkWithVk();
     }
@@ -84,6 +76,10 @@ Template.linkTemplate.helpers({
         }
     }
 });
+
+//Template.profileInfo.rendered= function(){
+//    $('#bashQuote').append('<script type="text/javascript" src="http://bash.im/forweb/"/>');
+//}
 
 Template.profileInfo.helpers({
     //bashim: function () {

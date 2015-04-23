@@ -7,6 +7,7 @@ Deps.autorun(function(){
         Meteor.subscribe('holiday', Meteor.userId());
         Meteor.subscribe('staff', Meteor.userId());
         Meteor.subscribe('timecard', Meteor.userId());
+        Meteor.subscribe('invite', Meteor.userId());
     }
 });
 
