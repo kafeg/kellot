@@ -2,143 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea26877-b210-4701-a95e-5ae61d62d72f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/includes/clientHelpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/profile/profile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/application/reviews/reviews.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/.nodelete" afterPath="$PROJECT_DIR$/client/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/.nodelete" afterPath="$PROJECT_DIR$/client/stylesheets/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/.nodelete" afterPath="$PROJECT_DIR$/client/views/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/.nodelete" afterPath="$PROJECT_DIR$/lib/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/.nodelete" afterPath="$PROJECT_DIR$/lib/collections/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.nodelete" afterPath="$PROJECT_DIR$/public/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/.nodelete" afterPath="$PROJECT_DIR$/server/.nodelete" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/C.png" afterPath="$PROJECT_DIR$/public/img/bgs/C.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.eot" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.ttf" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.woff" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/N.png" afterPath="$PROJECT_DIR$/public/img/bgs/N.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/RP.png" afterPath="$PROJECT_DIR$/public/img/bgs/RP.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/bgs/YA.png" afterPath="$PROJECT_DIR$/public/img/bgs/YA.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-144x144.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-144x144.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-192x192.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-192x192.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-36x36.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-36x36.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-48x48.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-48x48.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-72x72.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-72x72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/android-icon-96x96.png" afterPath="$PROJECT_DIR$/public/favicons/android-icon-96x96.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-114x114.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-114x114.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-120x120.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-120x120.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-144x144.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-144x144.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-152x152.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-152x152.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-180x180.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-180x180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-57x57.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-57x57.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-60x60.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-60x60.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-72x72.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-72x72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-76x76.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-76x76.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon-precomposed.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon-precomposed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/apple-icon.png" afterPath="$PROJECT_DIR$/public/favicons/apple-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/clear.png" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/clear.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon-16x16.png" afterPath="$PROJECT_DIR$/public/favicons/favicon-16x16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon-32x32.png" afterPath="$PROJECT_DIR$/public/favicons/favicon-32x32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon-96x96.png" afterPath="$PROJECT_DIR$/public/favicons/favicon-96x96.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/favicon.ico" afterPath="$PROJECT_DIR$/public/favicons/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot.png" afterPath="$PROJECT_DIR$/public/img/kellot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot.xcf" afterPath="$PROJECT_DIR$/public/img/kellot.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot_logo.png" afterPath="$PROJECT_DIR$/public/img/kellot_logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot_logo_transparent.png" afterPath="$PROJECT_DIR$/public/img/kellot_logo_transparent.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot_vectorized.png" afterPath="$PROJECT_DIR$/public/img/kellot_vectorized.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/loading.gif" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/img/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-144x144.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-144x144.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-150x150.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-150x150.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-310x310.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-310x310.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/ms-icon-70x70.png" afterPath="$PROJECT_DIR$/public/favicons/ms-icon-70x70.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/ptr-cloth-light.jpg" afterPath="$PROJECT_DIR$/public/img/ptr-cloth-light.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/subtle_textured_light_background.jpg" afterPath="$PROJECT_DIR$/public/img/subtle_textured_light_background.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/.finished-upgraders" afterPath="$PROJECT_DIR$/.meteor/.finished-upgraders" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/.gitignore" afterPath="$PROJECT_DIR$/.meteor/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/.id" afterPath="$PROJECT_DIR$/.meteor/.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/public/fonts/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.svg" afterPath="$PROJECT_DIR$/public/fonts/Material-Design-Icons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/actions.html" afterPath="$PROJECT_DIR$/client/views/application/includes/actions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/actions.js" afterPath="$PROJECT_DIR$/client/views/application/includes/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/arrive.js" afterPath="$PROJECT_DIR$/public/js/arrive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/autoform.global.js" afterPath="$PROJECT_DIR$/client/views/application/includes/autoform.global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/css/bootstrap-editable.css" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/css/bootstrap-editable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/js/bootstrap-editable.js" afterPath="$PROJECT_DIR$/public/xeditable/bootstrap-editable/js/bootstrap-editable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/browserconfig.xml" afterPath="$PROJECT_DIR$/public/favicons/browserconfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/company/company.html" afterPath="$PROJECT_DIR$/client/views/company/company.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/company/company.js" afterPath="$PROJECT_DIR$/client/views/company/company.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/company.js" afterPath="$PROJECT_DIR$/lib/collections/company.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.less" afterPath="$PROJECT_DIR$/public/css/custom.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/department/department.html" afterPath="$PROJECT_DIR$/client/views/department/department.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/department/department.js" afterPath="$PROJECT_DIR$/client/views/department/department.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/department.js" afterPath="$PROJECT_DIR$/lib/collections/department.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/fixtures.js" afterPath="$PROJECT_DIR$/server/fixtures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/helpAlerts.js" afterPath="$PROJECT_DIR$/client/views/application/includes/helpAlerts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/helpers.js" afterPath="$PROJECT_DIR$/lib/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/holiday/holiday.html" afterPath="$PROJECT_DIR$/client/views/holiday/holiday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/holiday/holiday.js" afterPath="$PROJECT_DIR$/client/views/holiday/holiday.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/holiday.js" afterPath="$PROJECT_DIR$/lib/collections/holiday.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/index.html" afterPath="$PROJECT_DIR$/client/views/application/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/kadira.js" afterPath="$PROJECT_DIR$/server/kadira.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/kellot.svg" afterPath="$PROJECT_DIR$/public/img/kellot.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/layout.html" afterPath="$PROJECT_DIR$/client/views/application/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/loading.html" afterPath="$PROJECT_DIR$/client/views/application/includes/loading.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.js" afterPath="$PROJECT_DIR$/client/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicons/manifest.json" afterPath="$PROJECT_DIR$/public/favicons/manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.css.map" afterPath="$PROJECT_DIR$/public/css/material-wfont.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.css" afterPath="$PROJECT_DIR$/public/css/material-wfont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.min.css.map" afterPath="$PROJECT_DIR$/public/css/material-wfont.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material-wfont.min.css" afterPath="$PROJECT_DIR$/public/css/material-wfont.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.css.map" afterPath="$PROJECT_DIR$/public/css/material.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.css" afterPath="$PROJECT_DIR$/public/css/material.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/material.js" afterPath="$PROJECT_DIR$/public/js/material.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.min.css.map" afterPath="$PROJECT_DIR$/public/css/material.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/material.min.css" afterPath="$PROJECT_DIR$/public/css/material.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/material.min.js.map" afterPath="$PROJECT_DIR$/public/js/material.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/material.min.js" afterPath="$PROJECT_DIR$/public/js/material.min.js" />
+      <change type="DELETED" beforePath="Z:\kellot\settings.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mup/mup.json" afterPath="$PROJECT_DIR$/mup/mup.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/navigation/navigation.html" afterPath="$PROJECT_DIR$/client/views/application/navigation/navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/navigation/navigation.js" afterPath="$PROJECT_DIR$/client/views/application/navigation/navigation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pdfmake.js" afterPath="$PROJECT_DIR$/public/js/pdfmake.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/platforms" afterPath="$PROJECT_DIR$/.meteor/platforms" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/profile/profile.html" afterPath="$PROJECT_DIR$/client/views/application/profile/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/prototypes.js" afterPath="$PROJECT_DIR$/lib/prototypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/publications.js" afterPath="$PROJECT_DIR$/server/publications.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/receiver.html" afterPath="$PROJECT_DIR$/public/receiver.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/replacements.html" afterPath="$PROJECT_DIR$/client/views/application/includes/replacements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/includes/replacements.js" afterPath="$PROJECT_DIR$/client/views/application/includes/replacements.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.css.map" afterPath="$PROJECT_DIR$/public/css/ripples.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.css" afterPath="$PROJECT_DIR$/public/css/ripples.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ripples.js" afterPath="$PROJECT_DIR$/public/js/ripples.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.min.css.map" afterPath="$PROJECT_DIR$/public/css/ripples.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/ripples.min.css" afterPath="$PROJECT_DIR$/public/css/ripples.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ripples.min.js.map" afterPath="$PROJECT_DIR$/public/js/ripples.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ripples.min.js" afterPath="$PROJECT_DIR$/public/js/ripples.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="$PROJECT_DIR$/lib/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/security.js" afterPath="$PROJECT_DIR$/server/security.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.json" afterPath="$PROJECT_DIR$/settings.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mup/settings.json" afterPath="$PROJECT_DIR$/mup/settings.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staff.html" afterPath="$PROJECT_DIR$/client/views/staff/staff.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/staff/staff.js" afterPath="$PROJECT_DIR$/client/views/staff/staff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/staff.js" afterPath="$PROJECT_DIR$/lib/collections/staff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/lib/subscriptions.js" afterPath="$PROJECT_DIR$/client/views/application/lib/subscriptions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/timecard.css" afterPath="$PROJECT_DIR$/public/css/timecard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timecard.forsk.ru.conf" afterPath="$PROJECT_DIR$/timecard.forsk.ru.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/timecard/timecard.html" afterPath="$PROJECT_DIR$/client/views/timecard/timecard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/lib/pdfmake/timecard.js" afterPath="$PROJECT_DIR$/client/lib/pdfmake/timecard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/timecard/timecard.js" afterPath="$PROJECT_DIR$/client/views/timecard/timecard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/timecard.js" afterPath="$PROJECT_DIR$/lib/collections/timecard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vfs_fonts.js" afterPath="$PROJECT_DIR$/public/js/vfs_fonts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kellot.iws" />
@@ -185,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/application/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35740742" vertical-offset="164" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="-3.574074" vertical-offset="164" max-vertical-offset="1190">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#template#1;n#!!top" expanded="true" />
@@ -209,11 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mup/settings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1513">
-              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.2800659" vertical-offset="867" max-vertical-offset="1717">
+              <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -301,6 +180,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kellot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mup" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -508,6 +401,11 @@
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="js.meteor.library.was.enabled" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\kellot\mup" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
@@ -555,14 +453,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -710,14 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1513">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/application/navigation/navigation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.807693" vertical-offset="303" max-vertical-offset="935">
@@ -763,8 +653,8 @@
         <state vertical-scroll-proportion="0.14964789" vertical-offset="0" max-vertical-offset="568">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -789,7 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/application/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35740742" vertical-offset="164" max-vertical-offset="1190">
+        <state vertical-scroll-proportion="-3.574074" vertical-offset="164" max-vertical-offset="1190">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#template#1;n#!!top" expanded="true" />
@@ -806,6 +696,22 @@
             <element signature="n#style#0;n#button#8;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#9;n#div#1;n#div#0;n#template#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mup/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2800659" vertical-offset="867" max-vertical-offset="1717">
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

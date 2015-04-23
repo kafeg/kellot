@@ -1,5 +1,16 @@
 {
   "public": {
-
+    "connectionBanner": {
+      "connectionLostText": "Соединение с сервером разорвано.",
+      "tryReconnectText": "Попробовать подключиться",
+      "reconnectBeforeCountdownText": "Следующая попытка подключения через",
+      "reconnectAfterCountdownText": "."
+    },
+    "ga": {
+      "account":"UA-62155396-1"
+    },
+    "yandex": {
+      "id":"29872914"
+    }
   }
 }
