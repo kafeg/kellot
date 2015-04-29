@@ -134,3 +134,7 @@ div.editable-buttons {
 td.actions {
   min-width: 50px;
 }
+
+.list-group .list-group-item .row-content {
+  min-height: 10px;
+}

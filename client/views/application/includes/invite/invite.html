@@ -3,8 +3,24 @@
         <div class="panel-heading">
             <h3 class="panel-title">Пригласите больше редакторов!</h3>
         </div>
+
+
         <div class="panel-body">
-            Ща...
+            {{#if invitedUsers.count}}
+                <div class="list-group">
+                    {{#each invitedUsers}}
+                        <div class="list-group-item">
+                            <div class="row-content">
+                                <div class="least-content">{{inviteTextStatus}} <a class="deleteInviteBtn" data-id="{{_id}}" href="#">x</a></div>
+                                <p class="list-group-item-text">{{email}}</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                    {{/each}}
+                </div>
+            {{else}}
+                В данный момент активных приглашений нет!
+            {{/if}}
         </div>
         <div class="panel-footer">
             {{> inviteSend}}
