@@ -48,3 +48,4 @@ alanning:roles
 cmather:handlebars-server
 email
 meteorhacks:kadira-profiler
+cfs:http-methods

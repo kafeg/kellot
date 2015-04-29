@@ -20,6 +20,10 @@
 
                 Ну а пока, предлагаем Вам связать текущий аккаунт с другими своими учётными записями из социальных сетей!
 
+                {{#if isInRole 'admin'}}
+                    {{> walletone}}
+                {{/if}}
+
                 <div id="bashQuote"></div>
             </div>
         </div>
@@ -61,6 +65,7 @@
             {{else}}
                 <button id="linkWithTwitter" class="btn btn-primary" style="width: 250px;">Связать с Twitter</button><br/>
             {{/if}}
+
         </div>
     </div>
 </template>

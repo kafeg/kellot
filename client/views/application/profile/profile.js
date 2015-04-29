@@ -23,6 +23,7 @@ Template.linkTemplate.events({
 Template.linkTemplate.helpers({
     services: function () {
         var user = Meteor.user();
+
         if (user) {
             return _.keys(user.services);
         } else {
@@ -31,6 +32,7 @@ Template.linkTemplate.helpers({
     },
     isLinkedGoogle: function () {
         var user = Meteor.user();
+        //console.log(user);
         //console.log(user.services);
         if (user) {
             //console.log('Google', user.services.google, typeof user.services.google !== 'undefined');

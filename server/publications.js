@@ -110,3 +110,25 @@ Meteor.publish('invite', function (userId) {
     return Invite.find({companyId: '0'});
   }
 });
+
+Meteor.publish('inviteToken', function (tokenId) {
+    check(tokenId, Match.Any);
+    //console.log('publication', tokenId);
+    return Invite.find({ token: tokenId });
+});
+
+Meteor.publish('companyToken', function (tokenId) {
+    check(tokenId, Match.Any);
+    var invite = Invite.findOne({ token: tokenId });
+    //console.log('publication companyToken', tokenId, invite.companyId);
+    return Company.find({ _id: invite.companyId });
+});
+
+Meteor.publish('userToken', function (tokenId) {
+    check(tokenId, Match.Any);
+    var invite = Invite.findOne({ token: tokenId });
+    var company = Company.findOne({ _id: invite.companyId });
+    console.log('publication userToken', tokenId, company.userId);
+    return Meteor.users.find({ _id: company.userId },
+        {fields: {'other': 0, 'things': 0, 'services':0, 'roles':0, createdAt:0}});
+});

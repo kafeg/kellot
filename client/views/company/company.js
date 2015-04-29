@@ -55,11 +55,34 @@ if (Meteor.isClient) {
     Template.firstLoginForm.events({
         'click #buttonCreateCompany': function () {
             Router.go("registerNewCompanyForm");
-        }
-    });
-    Template.firstLoginForm.events({
+        },
         'click #buttonRequestInviteToCompany': function () {
             Router.go("requestInviteToCompany");
+        }
+    });
+
+    Template.activateInviteToCompany.rendered = function () {
+        Session.set('activationToken', Router.current().params.activationToken);
+        console.log(Router.current().params.activationToken);
+    };
+    Template.activateInviteToCompany.helpers({
+        companyNameByInviteCode: function () {
+            var invite = Invite.findOne({token:Router.current().params.activationToken});
+            var company = Company.findOne({_id:invite.companyId});
+            //console.log(invite, company);
+            //return 'test';
+            return company.title;
+            //return Invite.find();
+        },
+        companyUserNameByInviteCode: function () {
+            var invite = Invite.findOne({token:Router.current().params.activationToken});
+            var company = Company.findOne({_id:invite.companyId});
+            var user = Meteor.users.findOne({_id:company.userId});
+            return user.profile.name;
+            //return Invite.find();
+        },
+        userActivationCode: function () {
+            return Router.current().params.activationToken;
         }
     });
 }
