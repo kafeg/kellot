@@ -74,3 +74,6 @@ vagrant:
 6) sudo chmod 777 -R /vagrant/
 7) vagrant reload
 8) Add Start-Vagrant to autostart via regedit
+
+RUN:
+ROOT_URL=http://p.kellot.ru:3000 meteor --settings mup/settings.json

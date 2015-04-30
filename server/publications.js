@@ -3,132 +3,96 @@ Meteor.publish("userData", function () {
       {fields: {'other': 1, 'things': 1, 'services':1}});
 });
 
+function getCompany(userId) {
+  //if user owner of company
+  var company = Company.findOne({userId: userId});
+  //if user not owner of company, but he is a memeber of company
+  if (company == undefined) {
+    if (userId != null) {
+      var user = Meteor.users.find({_id: userId}, {fields: {'companyId': 1}});
+      company = Company.findOne({_id: user.companyId});
+    }
+  }
+  return company;
+}
+
+function getCompanyByInviteToken(tokenId) {
+  var invite = Invite.findOne({ token: tokenId });
+  var company = Company.findOne({ _id: invite.companyId });
+  return company;
+}
+
+function getCompanyId(userId) {
+  var company = getCompany(userId);
+  if (company == undefined) {
+    return '0';
+  } else {
+    return company._id;
+  }
+}
+
 Meteor.publish('company', function (userId) {
   check(userId, Match.Any);
-
-  if (this.userId != null) {
-    var company = Company.findOne({userId: this.userId});
-    if (company != undefined) {
-      var companyId = company._id;
-      return Company.find({userId: userId});
-    } else {
-      return Company.find({_id: '0'});
-    }
-  }  else {
-    return Company.find({_id: '0'});
-  }
+  
+  return Company.find({_id: getCompanyId(userId)});
 });
 
 Meteor.publish('department', function (userId) {
   check(userId, Match.Any);
-
-  if (this.userId != null) {
-    var company = Company.findOne({userId: this.userId});
-    if (company != undefined) {
-      var companyId = company._id;
-      return Department.find({companyId: Company.findOne({userId: userId})._id});
-    } else {
-      return Department.find({companyId: '0'});
-    }
-  } else {
-    return Department.find({companyId: '0'});
-  }
+  
+  return Department.find({companyId: getCompanyId(userId)});
 });
 
 Meteor.publish('holiday', function (userId) {
   check(userId, Match.Any);
-
-  if (this.userId != null) {
-    var company = Company.findOne({userId: this.userId});
-    if (company != undefined) {
-      var companyId = company._id;
-      return Holiday.find({companyId: Company.findOne({userId: userId})._id});
-    } else {
-      return Holiday.find({companyId: '0'});
-    }
-  } else {
-    return Holiday.find({companyId: '0'});
-  }
+  
+  return Holiday.find({companyId: getCompanyId(userId)});
 });
 
 Meteor.publish('staff', function (userId) {
   check(userId, Match.Any);
 
-  var staffCollection;
-
-  if (this.userId != null) {
-    var company = Company.findOne({userId: this.userId});
-    if (company != undefined) {
-      var companyId = company._id;
-      staffCollection = Staff.find({companyId: Company.findOne({userId: userId})._id});
-    } else {
-      staffCollection = Staff.find({companyId: '0'});
-    }
-  } else {
-    staffCollection = Staff.find({companyId: '0'});
-  }
-
-  return staffCollection;
+  return Staff.find({companyId: getCompanyId(userId)});
 });
 
 Meteor.publish('timecard', function (userId, year, month) {
   check(userId, Match.Any);
   check(year, Match.Any);
   check(month, Match.Any);
+  
+  var companyId = getCompanyId(userId);
 
-  if (this.userId != null) {
-    var company = Company.findOne({userId: this.userId}); //todo associated with company user!
-    if (company != undefined) {
-          var companyId = company._id;
-          var staffs = Staff.find({companyId: companyId}, {fields: {_id: 1}}).fetch();
-          var staffIds = staffs.map(function(doc) { return doc._id });
+  var staffs = Staff.find({companyId: companyId}, {fields: {_id: 1}}).fetch();
+  var staffIds = staffs.map(function(doc) { return doc._id });
+  var timecard = Timecard.find({companyId: companyId, staffId: {$in: staffIds}, year:year, month:month});
 
-          var timecard = Timecard.find({companyId: companyId, staffId: {$in: staffIds}, year:year, month:month});
-          //console.log(userId, year, month, timecard.count());
-
-          return timecard;
-    } else {
-      return Timecard.find({companyId: '0'});
-    }
-  } else {
-    return Timecard.find({companyId: '0'});
-  }
+  return timecard;
 });
 
 Meteor.publish('invite', function (userId) {
   check(userId, Match.Any);
 
-  if (this.userId != null) {
-    var company = Company.findOne({userId: this.userId});
-    if (company != undefined) {
-      var companyId = company._id;
-      return Invite.find({companyId: Company.findOne({userId: userId})._id});
-    } else {
-      return Invite.find({companyId: '0'});
-    }
-  } else {
-    return Invite.find({companyId: '0'});
-  }
+  return Invite.find({companyId: getCompanyId(userId)});
 });
 
 Meteor.publish('inviteToken', function (tokenId) {
     check(tokenId, Match.Any);
-    //console.log('publication', tokenId);
+
     return Invite.find({ token: tokenId });
 });
 
 Meteor.publish('companyToken', function (tokenId) {
-    check(tokenId, Match.Any);
-    var invite = Invite.findOne({ token: tokenId });
-    //console.log('publication companyToken', tokenId, invite.companyId);
-    return Company.find({ _id: invite.companyId });
+  check(tokenId, Match.Any);
+  var company = getCompanyByInviteToken(tokenId);
+
+  return company;
 });
 
 Meteor.publish('userToken', function (tokenId) {
-    check(tokenId, Match.Any);
-    var invite = Invite.findOne({ token: tokenId });
-    var company = Company.findOne({ _id: invite.companyId });
-    console.log('publication userToken', tokenId, company.userId);
-    return Meteor.users.find({ _id: company.userId },
-        {fields: {'other': 0, 'things': 0, 'services':0, 'roles':0, createdAt:0}});
+  check(tokenId, Match.Any);
+
+  var company = getCompanyByInviteToken(tokenId);
+  //console.log('publication userToken', tokenId, company.userId);
+  return Meteor.users.find({ _id: company.userId },
+      {fields: {'other': 0, 'things': 0, 'services':0, 'roles':0, createdAt:0}});
 });
