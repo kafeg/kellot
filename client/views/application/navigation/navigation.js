@@ -36,5 +36,10 @@ Template._loginButtonsLoggedInDropdown.events({
         event.stopPropagation();
         Template._loginButtons.toggleDropdown();
         Router.go('profile');
+    },
+    'click #login-buttons-admin': function(event) {
+        event.stopPropagation();
+        Template._loginButtons.toggleDropdown();
+        Router.go('adminDashboard');
     }
 });
