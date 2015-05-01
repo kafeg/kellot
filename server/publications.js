@@ -17,6 +17,7 @@ function getCompany(userId) {
     return company;
 }
 
+//получаем объект компании по коду приглашения
 function getCompanyByInviteToken(tokenId) {
     var invite = Invite.findOne({ token: tokenId });
     var company = Company.findOne({ _id: invite.companyId });
@@ -87,7 +88,6 @@ Meteor.publish('companyToken', function (tokenId) {
     check(tokenId, Match.Any);
     var company = getCompanyByInviteToken(tokenId);
 
-    //must return company.find instead of company.findOne
     return Company.find({_id:company._id});
 });
 
@@ -95,7 +95,7 @@ Meteor.publish('userToken', function (tokenId) {
     check(tokenId, Match.Any);
 
     var company = getCompanyByInviteToken(tokenId);
-    //console.log('publication userToken', tokenId, company.userId);
+
     return Meteor.users.find({ _id: company.userId },
         {fields: {'other': 0, 'things': 0, 'services':0, 'roles':0, createdAt:0}});
 });
