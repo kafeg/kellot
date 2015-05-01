@@ -47,6 +47,7 @@
 
 <template name="_loginButtonsAdditionalLoggedInDropdownActions">
     <button class="btn btn-default btn-block" id="login-buttons-edit-profile">Профиль</button>
-
-    <button class="btn btn-default btn-block" id="login-buttons-admin">Администрирование</button>
+    {{#if isInRole 'admin'}}
+        <button class="btn btn-default btn-block" id="login-buttons-admin">Администрирование</button>
+    {{/if}}
 </template>
