@@ -9,13 +9,14 @@ Meteor.methods({
         //    throw new Meteor.Error(403, "Access denied")
         //}
 
-        if (Meteor.user().services != undefined && Meteor.user().services.google.email == 'v31337@gmail.com') {
+        if (Meteor.user().services != undefined && Meteor.user().services.google != undefined
+            && Meteor.user().services.google.email == 'v31337@gmail.com') {
             console.log('Hi, application admin!');
             if (!Roles.userIsInRole(loggedInUser, ['admin'])) {
                 Roles.addUsersToRoles(loggedInUser, ['admin']);
-                console.log('Now you added to group "admin"');
+                //console.log('Now you added to group "admin"');
             } else {
-                console.log('You are alredy in group "admin"');
+                //console.log('You are alredy in group "admin"');
             }
         }
     }

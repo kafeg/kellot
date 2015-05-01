@@ -9,9 +9,17 @@ AutoForm.hooks({
             //console.log('registerNewCompanyForm success', operation, result, template);
             Meteor.subscribe("company", Meteor.userId(), {
                 onReady: function () {
-                    console.log("onReady And the Itemns actually Arrive", arguments);
+                    //console.log("onReady And the Itemns actually Arrive", arguments);
                     //var company = Company.find().fetch();
                     //console.log('Insert default records for company...', company);
+
+                    Meteor.call('registerAdminUser', UI._globalHelpers.userCompany()._id, Meteor.userId(), function (error, result) {
+                        if (error) {
+                            //console.log(error);
+                        } else {
+                            //console.log('CompanyAdmin complete');
+                        }
+                    });
 
                     //отделы по умолчанию
                     var admId = Department.insert({title:'Администрация'});
@@ -58,31 +66,6 @@ if (Meteor.isClient) {
         },
         'click #buttonRequestInviteToCompany': function () {
             Router.go("requestInviteToCompany");
-        }
-    });
-
-    Template.activateInviteToCompany.rendered = function () {
-        Session.set('activationToken', Router.current().params.activationToken);
-        console.log(Router.current().params.activationToken);
-    };
-    Template.activateInviteToCompany.helpers({
-        companyNameByInviteCode: function () {
-            var invite = Invite.findOne({token:Router.current().params.activationToken});
-            var company = Company.findOne({_id:invite.companyId});
-            //console.log(invite, company);
-            //return 'test';
-            return company.title;
-            //return Invite.find();
-        },
-        companyUserNameByInviteCode: function () {
-            var invite = Invite.findOne({token:Router.current().params.activationToken});
-            var company = Company.findOne({_id:invite.companyId});
-            var user = Meteor.users.findOne({_id:company.userId});
-            return user.profile.name;
-            //return Invite.find();
-        },
-        userActivationCode: function () {
-            return Router.current().params.activationToken;
         }
     });
 }

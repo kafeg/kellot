@@ -1,22 +1,14 @@
-/**
- * Created by kafeg on 23.04.2015.
- */
-
-const INVITE_CREATED = 0;
-const INVITE_EMAILED = 1;
-const INVITE_COMPLETED = 2;
-
 Template.inviteSend.events({
     'click #sendInviteBtn': function () {
         var email = $('#inviteSend [name=email]').val();
         $('#sendInviteBtn').attr("disabled", true);
-        //console.log('invite to ' + email);
 
         var existsInvite = Invite.findOne({email:email});
         if ( existsInvite == undefined ) {
             if (UI._globalHelpers.validateEmail( email )) {
                 Meteor.call('invationSender', email, function (error, result) {
                     if (error) {
+                        $('#inviteSend [name=email]').val("");
                         $('#sendInviteBtn').removeAttr("disabled");
                         bootbox.alert("Ошибка доступа к данным. Пожалуйста обратитесь в службу поддержки! Подробности: " + error.reason);
                     } else {
@@ -27,9 +19,13 @@ Template.inviteSend.events({
                     }
                 });
             } else {
+                $('#inviteSend [name=email]').val("");
+                $('#sendInviteBtn').removeAttr("disabled");
                 bootbox.alert("Email не соответствует формату email@example.ru!");
             }
         } else {
+            $('#inviteSend [name=email]').val("");
+            $('#sendInviteBtn').removeAttr("disabled");
             bootbox.alert("На данный Email ранее уже было отправлено приглашение!");
         }
     }
@@ -62,9 +58,62 @@ Template.inviteList.helpers({
                 textStatus = 'выслано';
                 break;
             case INVITE_COMPLETED:
-                textStatus = 'зарегистрирован';
+                textStatus = 'принято';
                 break;
         }
         return textStatus;
+    },
+    inviteIsComplete: function () {
+        if (this.status == INVITE_COMPLETED) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+    inviteIsEmailed: function () {
+        if (this.status == INVITE_EMAILED) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+    inviteIsCreated: function () {
+        if (this.status == INVITE_CREATED) {
+            return true;
+        } else {
+            return false;
+        }
     }
 });
+
+if (Meteor.isClient) {
+
+    Template.activateInviteToCompany.rendered = function () {
+        Session.set('activationToken', Router.current().params.activationToken);
+    };
+    Template.activateInviteToCompany.helpers({
+        companyNameByInviteCode: function () {
+            var invite = Invite.findOne({token:Router.current().params.activationToken});
+            var company = Company.findOne({_id:invite.companyId});
+            return company.title;
+        },
+        companyUserNameByInviteCode: function () {
+            var invite = Invite.findOne({token:Router.current().params.activationToken});
+            var company = Company.findOne({_id:invite.companyId});
+            var user = Meteor.users.findOne({_id:company.userId});
+            return user.profile.name;
+        },
+        userActivationCode: function () {
+            return Router.current().params.activationToken;
+        },
+        inviteIsActivated: function () {
+            var userInviteCode = Router.current().params.activationToken;
+            var invite = Invite.findOne({token: userInviteCode});
+            if (invite.status == INVITE_COMPLETED) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    });
+}

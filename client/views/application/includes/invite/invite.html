@@ -4,14 +4,20 @@
             <h3 class="panel-title">Пригласите больше редакторов!</h3>
         </div>
 
-
         <div class="panel-body">
             {{#if invitedUsers.count}}
                 <div class="list-group">
                     {{#each invitedUsers}}
                         <div class="list-group-item">
                             <div class="row-content">
-                                <div class="least-content">{{inviteTextStatus}} <a class="deleteInviteBtn" data-id="{{_id}}" href="#">x</a></div>
+                                <div class="least-content">{{inviteTextStatus}}
+                                    {{#if isInRole 'CompanyAdmin'}}
+                                        {{#if inviteIsComplete}}
+                                        {{else}}
+                                            <a class="deleteInviteBtn" data-id="{{_id}}" href="#">x</a>
+                                        {{/if}}
+                                    {{/if}}
+                                </div>
                                 <p class="list-group-item-text">{{email}}</p>
                             </div>
                         </div>
@@ -22,9 +28,12 @@
                 В данный момент активных приглашений нет!
             {{/if}}
         </div>
-        <div class="panel-footer">
-            {{> inviteSend}}
-        </div>
+
+        {{#if isInRole 'CompanyAdmin'}}
+            <div class="panel-footer">
+                    {{> inviteSend}}
+            </div>
+        {{/if}}
     </div>
 </template>
 
@@ -39,4 +48,22 @@
     <fieldset>
         {{> afQuickField name='email'}}
     </fieldset>
+</template>
+
+<template name="activateInviteToCompany">
+    {{#if currentUser}}
+        Здравствуйте. Вы уже авторизованы в системе и не можете использовать данный код активации.
+    {{ else }}
+        {{#if inviteIsActivated}}
+            Здравствуйте, приглашение <b>{{userActivationCode}}</b> уже активировано. Вы не можете активировать его повторно.
+        {{ else }}
+            Здравствуйте! <br/><br/>
+
+            Судя по всему Вы получили приглашение к участию в ведении онлайн-табеля рабочего времени компании <b>{{companyNameByInviteCode}}</b> от пользователя <b>{{companyUserNameByInviteCode}}</b>.
+            <br/><br/>
+            Мы уже запомнили Ваш код активации <b>{{userActivationCode}}</b>  и готовы принять Вас в команду!<br/><br/>
+            Пожалуйста, щёлкните по пункту меню "Войти / Зарегистрироваться" в правом верхнем углу, выберите удобный для Вас метод авторизации и
+            Вы мгновенно станете одним из редакторов табеля компании <b>{{companyNameByInviteCode}}</b>!
+        {{/if}}
+    {{/if}}
 </template>

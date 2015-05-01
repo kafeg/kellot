@@ -49,3 +49,4 @@ cmather:handlebars-server
 email
 meteorhacks:kadira-profiler
 cfs:http-methods
+benjaminrh:user-session
