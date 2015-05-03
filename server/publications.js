@@ -99,3 +99,7 @@ Meteor.publish('userToken', function (tokenId) {
     return Meteor.users.find({ _id: company.userId },
         {fields: {'other': 0, 'things': 0, 'services':0, 'roles':0, createdAt:0}});
 });
+
+Meteor.publish("audits", function () {
+    return Audits.find();
+});

@@ -37,6 +37,36 @@
     </div>
 </template>
 
+<template name="inviteListFlat">
+            <p>Пригласите больше редакторов!</p>
+            {{#if invitedUsers.count}}
+                <div class="list-group">
+                    {{#each invitedUsers}}
+                        <div class="list-group-item">
+                            <div class="row-content">
+                                <div class="least-content">{{inviteTextStatus}}
+                                    {{#if isInRole 'CompanyAdmin'}}
+                                        {{#if inviteIsComplete}}
+                                        {{else}}
+                                            <a class="deleteInviteBtn" data-id="{{_id}}" href="#">x</a>
+                                        {{/if}}
+                                    {{/if}}
+                                </div>
+                                <p class="list-group-item-text">{{email}}</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                    {{/each}}
+                </div>
+            {{else}}
+                В данный момент активных приглашений нет!
+            {{/if}}
+
+        {{#if isInRole 'CompanyAdmin'}}
+                {{> inviteSend}}
+        {{/if}}
+</template>
+
 <template name="inviteSend">
     {{#autoForm collection="Invite" id="inviteSend" type="insert"}}
         {{> inviteFieldset}}

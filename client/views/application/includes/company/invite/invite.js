@@ -39,7 +39,7 @@ Template.inviteSend.events({
     }
 });
 
-Template.inviteList.events({
+Template.inviteListFlat.events({
     //обрабатываем клик по кнопке удаления приглашения
     'click .deleteInviteBtn': function () {
         //просто вызываем серверный метод с параметрами и выводим то или иное сообщение
@@ -54,7 +54,7 @@ Template.inviteList.events({
 });
 
 //определим несколько хелперов для шаблона с перечнем приглашений
-Template.inviteList.helpers({
+Template.inviteListFlat.helpers({
     //перечень приглашённых пользователей
     invitedUsers: function () {
         return Invite.find();
