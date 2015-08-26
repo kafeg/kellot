@@ -6,7 +6,7 @@
       "username": "admin",
       // or pem file (ssh based authentication)
       "pem": "~/.ssh/id_rsa",
-      "sshOptions": { "Port" : 7722 },
+      "sshOptions": { "Port" : 22 },
       "env": {}
     }
   ],
