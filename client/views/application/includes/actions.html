@@ -1,6 +1,6 @@
 <template name="addFormButton">
   <a href="{{pathFor formName}}">
-    <button class="btn btn-fab btn-fab btn-raised btn-primary top-right-pos"><i class="mdi-content-add-circle-outline"></i></button>
+    <button class="btn btn-fab btn-fab btn-raised btn-primary top-right-pos"><i class="mdi-content-add"></i></button>
   </a>
 </template>
 
@@ -12,7 +12,7 @@
 
 <template name="backFormButton">
   <a href="{{pathFor formName}}">
-    <button class="btn btn-fab btn-fab btn-raised btn-primary top-right-pos"><i class="mdi-content-save"></i></button>
+    <button class="btn btn-fab btn-fab btn-raised btn-primary top-right-pos"><i class="mdi-content-reply"></i></button>
   </a>
 </template>
 
@@ -26,12 +26,12 @@
 </template>
 
 <template name="tableActions">
-  <a id="confirm-delete" href="#" class="delete action-right" data-collection="{{collection}}" data-id="{{id}}"><i class="mdi-action-description"></i></a>
-  <a id="confirm-edit" href="{{pathFor updateFormName _id=id }}" class="edit action-right" data-id="{{id}}"><i class="mdi-content-flag"></i></a>
+  <a id="confirm-delete" href="#" class="delete action-right" data-collection="{{collection}}" data-id="{{id}}"><i class="mdi-action-delete"></i></a>
+  <a id="confirm-edit" href="{{pathFor updateFormName _id=id }}" class="edit action-right" data-id="{{id}}"><i class="mdi-content-create"></i></a>
 </template>
 
 <template name="pageTitle">
-  <h2><div class="icon-preview"><i class="mdi-social-group"></i></div>{{pageTitle}}</h2>
+  <h2><div class="icon-preview"><i class="mdi-action-favorite"></i></div>{{pageTitle}}</h2>
 </template>
 
 <template name="helpMessage">

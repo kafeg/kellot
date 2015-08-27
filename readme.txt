@@ -10,16 +10,21 @@
 
 === Material Design ===
 Обновление:
+0) Обновляем бутстрап до нужной версии
 1) Вручную качаем архив с https://github.com/FezVrasta/bootstrap-material-design
-2) Копируем всё из папки dist к нам в проект в public
+2) Копируем всё из папки dist к нам в проект в public, туда же ложим каталог less
+3) Смотрим как включено всё в head на странице http://fezvrasta.github.io/bootstrap-material-design/#checkbox и делаем так же
+4) Меняем цвет
 
 Не используем бовер и пакет метеора потому что они слишком глючат. Обновлено 20.04.15
 
 Меняем цвет приложения:
+0) npm install -g less, npm install -g clean-css
 1) выбираем http://materializecss.com/color.html
 2) cd public/css
 3) правим custom.less
 4) lessc custom.less > material-custom.css
+5) cleancss -o material-custom.min.css material-custom.css
 
 === Настройка сервера ===
 
