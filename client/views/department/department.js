@@ -32,7 +32,7 @@ Template.department.helpers({
   //titles
   addFormTitle: "Добавить подразделение",
   updateFormTitle: "Редактирвоать подразделение",
-  baseFormTitle: "Справоник подразделений"
+  baseFormTitle: "Справочник подразделений"
 });
 
 Template.addDepartmentForm.inheritsHelpersFrom(baseTemplateName);

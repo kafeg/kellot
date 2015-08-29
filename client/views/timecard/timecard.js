@@ -6,6 +6,17 @@ var timecardSubscription;
 Session.set("selectedMonth", currentDate.getMonth());
 Session.set("selectedYear", currentDate.getFullYear());
 
+////TODO make ReactiveVar and isVisible for column 29, 30 and 31
+//function checkDay31Hidden(objNum, object) {
+//    return currentDate.getMonth() == 7;
+//}
+//function checkDay30Hidden(objNum, object) {
+//    return currentDate.getMonth() == 2;
+//}
+//function checkDay29Hidden(objNum, object) {
+//    return currentDate.getMonth() == 2;
+//}
+
 function getTdBgColor(objNum, object) {
     return object['du'+objNum] ? 'timecardEdited' : 'timecardNotEdited';
 }
@@ -32,8 +43,9 @@ Template.timecard.helpers({
             rowsPerPage: 30,
             showNavigation: 'always',
             showFilter: false,
+            showRowCount: false,
             id: 'timcardTable',
-            //useFontAwesome: true,
+            useFontAwesome: true,
             fields: [
                 {   key: 'staffId', label: 'Сотрудник', fn: function (value, object) {
                     var staff = Staff.findOne({_id: value});
@@ -69,7 +81,7 @@ Template.timecard.helpers({
                 {   key: 'd28', label: '28', fn: function (value, object) { return getSafeString('28', value, object); }},
                 {   key: 'd29', label: '29', fn: function (value, object) { return getSafeString('29', value, object); }},
                 {   key: 'd30', label: '30', fn: function (value, object) { return getSafeString('30', value, object); }},
-                {   key: 'd31', label: '31', fn: function (value, object) { return getSafeString('31', value, object); }},
+                {   key: 'd31', label: '31', fn: function (value, object) { return getSafeString('31', value, object);  }},
                 {key: 'workDaysCount', label: 'Дни'},
                 {key: 'monthHours', label: 'Часы'},
                 {key: 'monthOvertimeHours', label: 'Сврх'},
@@ -136,7 +148,7 @@ Template.timecard.created = function () {
 
     registerNewEditableTypes();
     Tracker.autorun(function () {
-        //console.log('staffUpdated');
+        console.log('staffUpdated');
         //var d = new Date();
         //var currentYear = d.getFullYear();
         //var currentMonthId = d.getMonth();
@@ -233,9 +245,12 @@ Router.map(function () {
     this.route(baseTemplateName, {
         path: '/' + baseTemplateName,
         waitOn: function () {
-            Meteor.subscribe('company', Meteor.userId());
-            //console.log('resubscribe');
-            Meteor.subscribe('staff', Meteor.userId());
+            Meteor.autorun(function(c) {
+                Meteor.subscribe('company', Meteor.userId());
+                //console.log('resubscribe');
+                Meteor.subscribe('staff', Meteor.userId());
+                Meteor.subscribe('timecard', Meteor.userId());
+            });
         }
     });
     this.route('add' + baseTemplateNameF + 'Form', {
@@ -261,13 +276,12 @@ function timecardGenerator() {
         if (error) {
             bootbox.alert("Ошибка доступа к данным. Пожалуйста обратитесь в службу поддержки! Подробности: " + error.reason);
         } else {
-            //console.log('subs2', timecardSubscription);
-            if ((timecardSubscription == undefined) || (timecardSubscription.stopped == true)) {
-                timecardSubscription = Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
-                timecardSubscription.stopped = false;
+            //console.log('timeCardSubscription', timecardSubscription, timecardSubscription.stopped, timecardSubscription.ready());
+            if ((timecardSubscription != undefined)) {
+                timecardSubscription.stop();
             }
-            //timecardSubscription.start();
-            //Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
+            timecardSubscription = Meteor.subscribe('timecard', Meteor.userId(), Session.get("selectedYear"), Session.get("selectedMonth"));
+            timecardSubscription.stopped = false;
         }
     });
     return 0;

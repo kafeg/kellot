@@ -1,6 +1,6 @@
 Meteor.subscribe('company', Meteor.userId());
 
-Deps.autorun(function(){
+Meteor.autorun(function(){
     if(Meteor.userId()){
         Meteor.subscribe('company', Meteor.userId());
         Meteor.subscribe('department', Meteor.userId());

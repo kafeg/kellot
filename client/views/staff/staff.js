@@ -70,10 +70,10 @@ Template.staff.helpers({
     updateFormTitle: "Редактирвоать карточку сотрудника",
     baseFormTitle: "Сотрудники",
     datepickerOptions: function () {
-        return {format: "dd.mm.yyyy"}
+        return {format: "dd.mm.yyyy", language:"ru"}
     },
     datetimepickerOptions: function () {
-        return {format: 'HH:mm', pickDate: false, useCurrent: false}
+        return {format: 'HH:mm', locale:"ru", pickDate: false, useCurrent: false}
     }
 });
 

@@ -28,8 +28,6 @@ aldeed:template-extension
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
 natestrauser:select2
-tsega:bootstrap3-datetimepicker
-aldeed:autoform-bs-datetimepicker
 audit-argument-checks
 mrt:reactive-publish
 random
@@ -52,3 +50,9 @@ cfs:http-methods
 benjaminrh:user-session
 alethes:pages
 houston:admin
+mrt:moment-timezone
+rzymek:moment-locale-ru
+aldeed:autoform-bs-datetimepicker
+tsega:bootstrap3-datetimepicker@=3.1.3_3
+rajit:bootstrap3-datepicker-ru
+reactive-var
