@@ -47,6 +47,62 @@ function getSafeString(objNum, value, object) {
 
 Template.timecard.helpers({
     settings: function () {
+        // Во всех месяцах дней минимум 28
+        fields = [
+            {   key: 'staffId', label: 'Сотрудник', fn: function (value, object) {
+                var staff = Staff.findOne({_id: value});
+                return new Spacebars.SafeString(staff.firstName + ' ' + staff.lastName);
+            }},
+            {   key: 'd1', label: '1', fn: function (value, object) { return getSafeString('1', value, object); }},
+            {   key: 'd2', label: '2', fn: function (value, object) { return getSafeString('2', value, object); }},
+            {   key: 'd3', label: '3', fn: function (value, object) { return getSafeString('3', value, object); }},
+            {   key: 'd4', label: '4', fn: function (value, object) { return getSafeString('4', value, object); }},
+            {   key: 'd5', label: '5', fn: function (value, object) { return getSafeString('5', value, object); }},
+            {   key: 'd6', label: '6', fn: function (value, object) { return getSafeString('6', value, object); }},
+            {   key: 'd7', label: '7', fn: function (value, object) { return getSafeString('7', value, object); }},
+            {   key: 'd8', label: '8', fn: function (value, object) { return getSafeString('8', value, object); }},
+            {   key: 'd9', label: '9', fn: function (value, object) { return getSafeString('9', value, object); }},
+            {   key: 'd10', label: '10', fn: function (value, object) { return getSafeString('10', value, object); }},
+            {   key: 'd11', label: '11', fn: function (value, object) { return getSafeString('11', value, object); }},
+            {   key: 'd12', label: '12', fn: function (value, object) { return getSafeString('12', value, object); }},
+            {   key: 'd13', label: '13', fn: function (value, object) { return getSafeString('13', value, object); }},
+            {   key: 'd14', label: '14', fn: function (value, object) { return getSafeString('14', value, object); }},
+            {   key: 'd15', label: '15', fn: function (value, object) { return getSafeString('15', value, object); }},
+            {   key: 'd16', label: '16', fn: function (value, object) { return getSafeString('16', value, object); }},
+            {   key: 'd17', label: '17', fn: function (value, object) { return getSafeString('17', value, object); }},
+            {   key: 'd18', label: '18', fn: function (value, object) { return getSafeString('18', value, object); }},
+            {   key: 'd19', label: '19', fn: function (value, object) { return getSafeString('19', value, object); }},
+            {   key: 'd20', label: '20', fn: function (value, object) { return getSafeString('20', value, object); }},
+            {   key: 'd21', label: '21', fn: function (value, object) { return getSafeString('21', value, object); }},
+            {   key: 'd22', label: '22', fn: function (value, object) { return getSafeString('22', value, object); }},
+            {   key: 'd23', label: '23', fn: function (value, object) { return getSafeString('23', value, object); }},
+            {   key: 'd24', label: '24', fn: function (value, object) { return getSafeString('24', value, object); }},
+            {   key: 'd25', label: '25', fn: function (value, object) { return getSafeString('25', value, object); }},
+            {   key: 'd26', label: '26', fn: function (value, object) { return getSafeString('26', value, object); }},
+            {   key: 'd27', label: '27', fn: function (value, object) { return getSafeString('27', value, object); }},
+            {   key: 'd28', label: '28', fn: function (value, object) { return getSafeString('28', value, object); }},
+        ]
+        // Если месяц не февраль, то в нем минимум 30 дней
+        if (Session.get("selectedMonth") != 1) {
+            fields.push( 
+                {   key: 'd29', label: '29', fn: function (value, object) { return getSafeString('29', value, object); }},
+                {   key: 'd30', label: '30', fn: function (value, object) { return getSafeString('30', value, object); }}
+            );
+        }
+        // А если это январь, март, май, июль, август, октябрь и декабрь - 31 день
+        if ([0, 2, 4, 6, 7, 9, 11].indexOf(Session.get("selectedMonth")) > -1) {
+            fields.push(
+                {   key: 'd31', label: '31', fn: function (value, object) { return getSafeString('31', value, object); }}
+            );
+        }
+        // Не забудем вывести отработанное время
+        fields.push(
+            {key: 'workDaysCount', label: 'Дни'},
+            {key: 'monthHours', label: 'Часы'},
+            {key: 'monthOvertimeHours', label: 'Сврх'},
+            {key: 'monthNightHours', label: 'Ночь'}
+        ); 
+
         return {
             collection: Timecard.find(),
             rowsPerPage: 30,
@@ -55,47 +111,7 @@ Template.timecard.helpers({
             showRowCount: false,
             id: 'timcardTable',
             useFontAwesome: true,
-            fields: [
-                {   key: 'staffId', label: 'Сотрудник', fn: function (value, object) {
-                    var staff = Staff.findOne({_id: value});
-                    return new Spacebars.SafeString(staff.firstName + ' ' + staff.lastName);
-                }},
-                {   key: 'd1', label: '1', fn: function (value, object) { return getSafeString('1', value, object); }},
-                {   key: 'd2', label: '2', fn: function (value, object) { return getSafeString('2', value, object); }},
-                {   key: 'd3', label: '3', fn: function (value, object) { return getSafeString('3', value, object); }},
-                {   key: 'd4', label: '4', fn: function (value, object) { return getSafeString('4', value, object); }},
-                {   key: 'd5', label: '5', fn: function (value, object) { return getSafeString('5', value, object); }},
-                {   key: 'd6', label: '6', fn: function (value, object) { return getSafeString('6', value, object); }},
-                {   key: 'd7', label: '7', fn: function (value, object) { return getSafeString('7', value, object); }},
-                {   key: 'd8', label: '8', fn: function (value, object) { return getSafeString('8', value, object); }},
-                {   key: 'd9', label: '9', fn: function (value, object) { return getSafeString('9', value, object); }},
-                {   key: 'd10', label: '10', fn: function (value, object) { return getSafeString('10', value, object); }},
-                {   key: 'd11', label: '11', fn: function (value, object) { return getSafeString('11', value, object); }},
-                {   key: 'd12', label: '12', fn: function (value, object) { return getSafeString('12', value, object); }},
-                {   key: 'd13', label: '13', fn: function (value, object) { return getSafeString('13', value, object); }},
-                {   key: 'd14', label: '14', fn: function (value, object) { return getSafeString('14', value, object); }},
-                {   key: 'd15', label: '15', fn: function (value, object) { return getSafeString('15', value, object); }},
-                {   key: 'd16', label: '16', fn: function (value, object) { return getSafeString('16', value, object); }},
-                {   key: 'd17', label: '17', fn: function (value, object) { return getSafeString('17', value, object); }},
-                {   key: 'd18', label: '18', fn: function (value, object) { return getSafeString('18', value, object); }},
-                {   key: 'd19', label: '19', fn: function (value, object) { return getSafeString('19', value, object); }},
-                {   key: 'd20', label: '20', fn: function (value, object) { return getSafeString('20', value, object); }},
-                {   key: 'd21', label: '21', fn: function (value, object) { return getSafeString('21', value, object); }},
-                {   key: 'd22', label: '22', fn: function (value, object) { return getSafeString('22', value, object); }},
-                {   key: 'd23', label: '23', fn: function (value, object) { return getSafeString('23', value, object); }},
-                {   key: 'd24', label: '24', fn: function (value, object) { return getSafeString('24', value, object); }},
-                {   key: 'd25', label: '25', fn: function (value, object) { return getSafeString('25', value, object); }},
-                {   key: 'd26', label: '26', fn: function (value, object) { return getSafeString('26', value, object); }},
-                {   key: 'd27', label: '27', fn: function (value, object) { return getSafeString('27', value, object); }},
-                {   key: 'd28', label: '28', fn: function (value, object) { return getSafeString('28', value, object); }},
-                {   key: 'd29', label: '29', fn: function (value, object) { return getSafeString('29', value, object); }},
-                {   key: 'd30', label: '30', fn: function (value, object) { return getSafeString('30', value, object); }},
-                {   key: 'd31', label: '31', fn: function (value, object) { return getSafeString('31', value, object);  }},
-                {key: 'workDaysCount', label: 'Дни'},
-                {key: 'monthHours', label: 'Часы'},
-                {key: 'monthOvertimeHours', label: 'Сврх'},
-                {key: 'monthNightHours', label: 'Ночь'},
-            ]
+            fields: fields
         };
     },
 //base vars
