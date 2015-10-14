@@ -21,6 +21,7 @@ function getTdBgColor(objNum, object) {
     return object['du'+objNum] ? 'timecardEdited' : 'timecardNotEdited';
 }
 
+//Получаем строку с отработанным временем для шаблона 
 function getSafeString(objNum, value, object) {
     var tdBgColor = object['du'+objNum] ? 'timecardEdited' : 'timecardNotEdited';
     if (( object['dh'+objNum] == 'h1') || ( object['dh'+objNum] == 'h2')) {
@@ -33,7 +34,15 @@ function getSafeString(objNum, value, object) {
     var enCode = 'code'+'YA';
     enCode = '';
 
-    return new Spacebars.SafeString('<a href="#" class="timecardEditable '+tdBgColor+' '+enCode+'" data-id="' + object._id + '" data-num="'+objNum+'" data-val="' + value + '" data-valtype="' + object['dt'+objNum] + '" data-valh="' + object['dh'+objNum] + '">' + value + '</a>');
+    return new Spacebars.SafeString(
+        '<a href="#" class="timecardEditable ' + tdBgColor + ' ' + enCode +
+        '" data-id="' + object._id + 
+        '" data-num="' + objNum + 
+        '" data-val="' + value + 
+        '" data-valtype="' + object['dt'+objNum] + 
+        '" data-valh="' + object['dh'+objNum] + 
+        '">' + value + '</a>'
+    );
 }
 
 Template.timecard.helpers({
