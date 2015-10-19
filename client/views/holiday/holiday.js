@@ -41,9 +41,9 @@ Template.holiday.helpers({
     //titles
     addFormTitle: "Добавить праздник",
     updateFormTitle: "Редактирвоать праздник",
-    baseFormTitle: "Справоник праздников",
+    baseFormTitle: "Справочник праздников",
     datepickerOptions: function () {
-        return {format: "dd.mm.yyyy"}
+        return {format: "dd.mm.yyyy", language:"ru"}
     }
 });
 
